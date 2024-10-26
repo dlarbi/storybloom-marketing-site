@@ -126,10 +126,10 @@ nav .btn:hover {
     padding: 0.75rem 2rem;
     border-radius: 50px;
     text-decoration: none;
-    font-family: "Indie Flower", cursive;
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 20px;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .content-wrapper {
