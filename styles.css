@@ -20,7 +20,13 @@ body {
     margin: 0 auto;
     position: relative;
 }
-
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+.logo-wrapper img {
+    margin-right:15px;
+}
 /* Navigation */
 nav {
     position: absolute;
