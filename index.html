@@ -43,7 +43,7 @@
         <div class="container">
             <h1>Stories<br/> Crafted by You</h1>
             <h3>Ignite your child's imagination with StoryBloom—the first AI-powered platform that transforms your beloved people, pets, and friends into beautifully illustrated storybooks.</h3>
-            <a href="#" class=" btn-cta btn-primary">Craft your first story <span class="material-symbols-outlined">potted_plant</span></a>
+            <a href="#" class=" btn-cta btn-primary" onclick="openStoryModal()">Try it free <span class="material-symbols-outlined">potted_plant</span></a>
         </div>
     </section>
 
@@ -265,5 +265,117 @@
     </div>
     <!-- JavaScript -->
     <script src="animations.js"></script>
+    <script type="text/javascript">
+    // Add this to your marketing site HTML to create the button
+// <button id="openStoryModal" onclick="openStoryModal()">Create Your Story</button>
+
+// JavaScript to add to your marketing site for the widget
+(function() {
+  // Create modal container
+  const modal = document.createElement('div');
+  modal.id = 'storyModal';
+  modal.style.display = 'none';
+  modal.style.position = 'fixed';
+  modal.style.top = '0';
+  modal.style.left = '0';
+  modal.style.width = '100%';
+  modal.style.height = '100%';
+  modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
+  modal.style.zIndex = '1000';
+  modal.style.overflowY = 'auto';
+
+  modal.innerHTML = `
+    <div style="max-width: 600px; margin: 50px auto;">
+    <div style="width:94%; margin: 0 3%; background: linear-gradient(37deg, #e1edff, #ffe6df); padding: 30px; border-radius: 20px; position: relative; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);font-family: 'Montserrat', sans-serif">
+      <button onclick="closeStoryModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: #333; cursor: pointer;">&times;</button>
+      <h2 style="margin-bottom: 20px; text-align: center; font-family: 'Indie Flower', cursive; color: #4e6487;">Create Your Story</h2>
+      <form id="storyForm" style="">
+        <label for="characterName" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Character Name:</label>
+        <input type="text" id="characterName" name="characterName" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease;"/>
+
+        <label for="characterType" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">What is your character? (e.g., a dragon, a brave knight):</label>
+        <input type="text" id="characterType" name="characterType" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease;"/>
+
+        <label for="characterDescription" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Describe your character (e.g., loves adventure, always helps friends):</label>
+        <input type="text" id="characterDescription" name="characterDescription" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease;"/>
+
+        <label for="storyChoice" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Choose Your Story:</label>
+        <select id="storyChoice" name="storyChoice" style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease;">
+          <option value="Adventure in the Forest">Adventure in the Forest</option>
+          <option value="A Day at the Beach">A Day at the Beach</option>
+          <option value="The Magical School">The Magical School</option>
+        </select>
+
+        <label for="userEmail" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Your Email:</label>
+        <input type="email" id="userEmail" name="userEmail" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease;"/>
+
+        <button type="submit" style="width: 100%; padding: 15px; background: linear-gradient(to right, #6eb6ff, #4864e6); border: none; color: #fff; border-radius: 10px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;">Submit Your Story</button>
+      </form>
+    </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Open modal function
+  window.openStoryModal = function() {
+    modal.style.display = 'block';
+  };
+
+  // Close modal function
+  window.closeStoryModal = function() {
+    modal.style.display = 'none';
+  };
+
+  // Handle form submission
+  document.getElementById('storyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const characterName = document.getElementById('characterName').value;
+    const characterType = document.getElementById('characterType').value;
+    const characterDescription = document.getElementById('characterDescription').value;
+    const storyChoice = document.getElementById('storyChoice').value;
+    const userEmail = document.getElementById('userEmail').value;
+
+    // Build StorySeed object
+    const storySeed = {
+      characters: [{
+        name: characterName,
+        description: `A ${characterType} who ${characterDescription}.`
+      }],
+      pageCount: 12,
+      childAge: 5, // Default child age
+      lessons: [],
+      writingStyle: 'Playful, light', // Default writing style
+      artStyle: 'Watercolor', // Default art style
+      obstacle: 'The character must solve a simple riddle.', // Example obstacle
+      solution: 'The character finds the answer with help.',
+      ending: 'The character succeeds and learns a valuable lesson.',
+      genre: storyChoice
+    };
+
+    // Dummy API submission
+    fetch('https://dummyapi.com/build-story', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(storySeed)
+    })
+    .then(response => {
+      if (response.ok) {
+        alert('Your story is being created! We will send it to your email shortly.');
+        closeStoryModal();
+      } else {
+        alert('There was an issue creating your story. Please try again later.');
+      }
+    })
+    .catch(() => {
+      alert('There was an error connecting to the server. Please try again.');
+    });
+  });
+})();
+
+
+
+    </script>
 </body>
 </html>
