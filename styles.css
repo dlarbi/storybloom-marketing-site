@@ -1,0 +1,723 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+nav .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav .btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    border: 1px solid white;
+}
+
+nav .btn:hover {
+    background-color: transparent;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/willie.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 13rem 0 3rem 0;
+    color: #fff;
+    text-align: left;
+    position: relative;
+    height: 900px;
+}
+
+.hero-fader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    max-width: 800px;
+    line-height: 5.5rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h3 {
+    font-weight: 100;
+    max-width: 700px;
+    margin-bottom: 2em;
+    line-height: 2.1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: linear-gradient(to left, #6eb6ff, #4864e6); /* Light blue to darker blue gradient */
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.btn-cta {
+    background: linear-gradient(to left, #6eb6ff, #4864e6); /* Light blue to darker blue gradient */
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: "Indie Flower", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.content-wrapper {
+    background: linear-gradient(to right, white, #eaeefc, white);
+  }
+
+.material-symbols-outlined {
+    position: relative;
+    top: 4px;
+}
+
+.hero .btn:hover {
+    background-color: #3f3387;
+}
+
+/* Sections */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2C3E50;
+}
+
+section p {
+    text-align: left;
+    max-width: 800px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+section p.blurb {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Features Section */
+.features .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.features .feature-item {
+    background-color: #F9F9F9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.features .icon {
+    font-size: 3rem;
+}
+
+.features h3 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #2C3E50;
+}
+
+.features ul {
+    list-style: none;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.features ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+/* How It Works */
+.how-it-works h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.how-it-works p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.how-it-works .container {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.image-left, .image-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-left img, .image-right img {
+    width: 250px;
+    border-radius: 40px;
+}
+
+.text-left, .text-right {
+    padding: 50px;
+}
+
+.text-left {
+    padding-left: 100px;
+}
+
+.text-right {
+    padding-right: 100px;
+}
+
+.text-left p, .text-right p {
+    line-height: 2.3rem;
+}
+
+/* Steps Container */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Step Card */
+.step {
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.step1 {
+    background-color: #cdc0e6;
+}
+
+.step.step1 p, .step.step1 h3, .step.step1 .card_icon {
+    color: #2C3E50;
+}
+
+.step3 {
+    background-color: #f3ce43;
+}
+
+.step.step3 p, .step.step3 h3, .step.step3 .card_icon {
+    color: #2C3E50;
+}
+
+.step4 {
+    background-color: #ad95dd; /* Soft purple background */
+}
+
+.step.step4 p, .step.step4 h3, .step.step4 .card_icon {
+    color: #ffffff;
+}
+
+.step2 {
+    background-color: #4f2998;
+}
+
+.step:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.2); /* Faded circle background */
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+.icon-wrapper i {
+    font-size: 36px; /* Icon size */
+    color: #fff;
+}
+
+/* Step Header */
+.step h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+/* Step Description */
+.step p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: #f0f0f0; /* Lighter gray text */
+}
+
+.material-symbols-outlined.card_icon {
+    font-size: 40px;
+    color: white;
+}
+
+/* Testimonials */
+/* Testimonials Section */
+.testimonials {
+    padding: 6rem 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+}
+
+.testimonials h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+/* Testimonial Grid */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Flexible grid layout */
+    gap: 3rem; /* Spacing between grid items */
+}
+
+/* Testimonial Item */
+.testimonial-item {
+    background: #ffffff;
+    border: 1px solid #eaeaea; /* Subtle border */
+    border-radius: 20px; /* Soft rounded corners */
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    position: relative;
+    overflow: hidden; /* Prevent overflow from visual elements */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Elegant Hover Effect */
+.testimonial-item:hover {
+    transform: translateY(-10px); /* Slight lift */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+/* Add a decorative top border on hover */
+.testimonial-item::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 0%;
+    background: linear-gradient(90deg, #65abf2, #6eb6ff); /* Gradient border */
+    top: 0;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+.testimonial-item:hover::before {
+    width: 100%; /* Expand border on hover */
+}
+
+.quote-icon {
+    font-size: 3rem;
+}
+
+/* Testimonial Text */
+.testimonial-item p {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+
+
+/* Testimonial Author */
+.testimonial-item h4 {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonial Role */
+.testimonial-item span {
+    font-size: 1rem;
+    color: #999;
+    font-weight: 500;
+}
+
+
+
+/* Pricing */
+.pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.pricing-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    flex: 1 1 300px; /* Flexible item size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    justify-content: space-between; /* Distribute space */
+    min-height: 450px; /* Set a minimum height to ensure consistency */
+    position: relative; /* Create a stacking context */
+}
+
+.pricing-item h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-item h4 {
+    font-size: 1.5rem;
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+}
+
+/* Custom Bullet Point Styling */
+.pricing-item ul {
+    list-style: none; /* Remove default bullets */
+    margin: 0;
+    padding: 0;
+    text-align: left; /* Align text to the left */
+}
+
+.pricing-item ul li {
+    position: relative;
+    padding-left: 2rem; /* Space for custom bullet */
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Custom Icon for Bullet Points */
+.pricing-item ul li::before {
+    content: '✔'; /* Use a checkmark symbol */
+    position: absolute;
+    left: 0;
+    top: -2px; /* Center vertically */
+    font-size: 1.2rem;
+    color: #e67e22; /* Custom color for the icon */
+    font-weight: 700;
+}
+
+/* Hover Effect */
+
+/* Center and position button at the bottom */
+.pricing-item a.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+.pricing-item .btn-primary {
+    background: linear-gradient(to right, #6eb6ff, #4864e6);
+    color: white;
+}
+
+.pricing-item .btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.pricing-item .btn-primary:hover, .pricing-item .btn-secondary:hover {
+    transform: scale(1.05); /* Slight lift effect */
+}
+
+.best-value {
+    border: 2px solid #e67e22; /* Accent border */
+    background-color: #fdf6e3; /* Light yellow background */
+}
+
+.best-value h3 {
+    color: #d35400;
+}
+
+.best-value h4 {
+    color: #d35400;
+}
+
+/* Flex grow to ensure button is always at the bottom */
+.pricing-item .btn {
+    align-self: center; /* Center the button horizontally */
+    margin-top: auto; /* Push the button to the bottom of the card */
+}
+
+
+/* FAQ */
+.faq .faq-item {
+    margin-bottom: 2rem;
+}
+
+.faq h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2C3E50;
+}
+
+.faq p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact */
+.container .social-links {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.social-links a {
+    margin: 0 0.5rem;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+}
+
+.features-monster {
+    margin: 0 auto;
+    width: 100px;
+    display: block;
+}
+.testimonial-monster {
+    width: 200px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background-color: #211c3c;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+footer .footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-links li {
+    margin: 0 1rem;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #E67E22;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #D35400;
+}
+
+.btn-secondary {
+    background-color: #95A5A6;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #7F8C8D;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    nav .btn {
+        display: none;
+    }
+    .hero {
+        height: 700px;
+        padding: 10rem 0 2rem 0; /* Adjusting padding to move the content up */
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;  /* Reducing font size on mobile */
+        line-height: 3rem;  /* Adjusting line height for better readability */
+        margin: 3rem auto 1rem auto;  /* Moving up the hero text */
+    }
+
+    .features .feature-grid,
+    .testimonials .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr; /* Full-width cards on mobile */
+    }
+
+    .how-it-works .container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .flex-item {
+        flex: none;
+        width: 100%;
+    }
+
+    /* Adjust the order to alternate images and text */
+    .container:nth-child(even) .flex-item {
+        order: 2;
+    }
+
+    .container:nth-child(even) .flex-item.image-left,
+    .container:nth-child(even) .flex-item.image-right {
+        order: 1;
+    }
+
+    .text-left, .text-right {
+        text-align: center;
+        padding: 50px 0 100px 0;
+    }
+    .text-left p, .text-right p {
+        text-align: center;
+    }
+
+    .text-left {
+        padding-left: 0;
+    }
+
+    .text-right {
+        padding-right: 0;
+    }
+
+    .image-left img, .image-right img {
+        margin-bottom: 20px;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .testimonials h2 {
+        font-size: 2.4rem;
+    }
+
+    .testimonial-item {
+        padding: 2rem;
+    }
+
+    .testimonial-item p {
+        font-size: 1.1rem;
+    }
+
+    .testimonial-item h4 {
+        font-size: 1.2rem;
+    }
+}
