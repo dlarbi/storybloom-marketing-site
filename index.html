@@ -306,40 +306,48 @@
             modal.style.overflowY = 'auto';
 
             modal.innerHTML = `
-    <div style="max-width: 600px; margin: 50px auto;">
-    <div style="width:94%; margin: 0 3%; background: linear-gradient(37deg, #e1edff, #ffe6df); padding: 30px; border-radius: 20px; position: relative; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); font-family: 'Montserrat', sans-serif">
-        <button onclick="closeStoryModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: #333; cursor: pointer;">&times;</button>
-        <div style="width: 100%; text-align: center; margin-bottom:20px;">
-            <img src="images/transparent-logo.png" width="25px" height="25px" style="margin: 0 auto;"></img><h2 style="font-family: 'Montserrat'";>StoryBloom</h2>
+        <div style="max-width: 600px; margin: 50px auto;">
+        <div id="modalContent" style="width:94%; margin: 0 3%; background: linear-gradient(37deg, #e1edff, #ffe6df); padding: 30px; border-radius: 20px; position: relative; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); font-family: 'Montserrat', sans-serif">
+            <button onclick="closeStoryModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: #333; cursor: pointer;">&times;</button>
+            <div id="formContent">
+                <div style="width: 100%; text-align: center; margin-bottom:20px;">
+                    <img src="images/transparent-logo.png" width="25px" height="25px" style="margin: 0 auto;"></img><h2 style="font-family: 'Montserrat'";>StoryBloom</h2>
+                </div>
+                <form id="storyForm">
+                    <label for="storyChoice" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Choose Your Story:</label>
+                    <select id="storyChoice" name="storyChoice" style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;">
+                        <option value="Adventure in the Forest">Adventure in the Forest</option>
+                        <option value="A Day at the Beach">A Day at the Beach</option>
+                        <option value="The Magical School">The Magical School</option>
+                    </select>
+
+                    <label for="characterName" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Character Name</label>
+                    <input placeholder="Enter a name..." type="text" id="characterName" name="characterName" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <label for="characterType" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">What is your character?</label>
+                    <input placeholder="e.g., a dragon, a brave knight" type="text" id="characterType" name="characterType" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <label for="characterDescription" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Describe your character</label>
+                    <input placeholder="e.g., grey and white, wearing skiis, giant and red" type="text" id="characterDescription" name="characterDescription" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <label for="userEmail" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Your Email:</label>
+                    <input placeholder="@" type="email" id="userEmail" name="userEmail" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <button type="submit" id="submitButton" style="width: 100%; padding: 15px; background: linear-gradient(to right, #6eb6ff, #4864e6); border: none; color: #fff; border-radius: 30px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;">Create Your Story</button>
+                </form>
+                
+            </div>
+            <div id="loadingIndicator" style="display: none; text-align: center; padding: 20px;">
+                <p>Loading...</p>
+            </div>
+            <div id="successContent" style="display: none; text-align: center;">
+                <div style="color: green; font-size: 2rem; margin-bottom: 10px;">✔️</div>
+                <p>Your story was successfully created! Check your email for your personalized story.</p>
+                <a id="appLink" href="https://storybloom.me/download-app" target="_blank" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #28a745; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">Download Our App</a>
+            </div>
         </div>
-        <form id="storyForm">
-            <label for="storyChoice" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Choose Your Story:</label>
-            <select id="storyChoice" name="storyChoice" style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;">
-                <option value="Adventure in the Forest">Adventure in the Forest</option>
-                <option value="A Day at the Beach">A Day at the Beach</option>
-                <option value="The Magical School">The Magical School</option>
-            </select>
-
-            <label for="characterName" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Character Name</label>
-            <input placeholder="Enter a name..." type="text" id="characterName" name="characterName" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
-
-            <label for="characterType" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">What is your character?</label>
-            <input placeholder="e.g., a dragon, a brave knight" type="text" id="characterType" name="characterType" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
-
-            <label for="characterDescription" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Describe your character</label>
-            <input placeholder="e.g., grey and white, wearing skiis, giant and red" type="text" id="characterDescription" name="characterDescription" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
-
-           
-
-            <label for="userEmail" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Your Email:</label>
-            <input placeholder="@" type="email" id="userEmail" name="userEmail" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
-
-            <button type="submit" style="width: 100%; padding: 15px; background: linear-gradient(to right, #6eb6ff, #4864e6); border: none; color: #fff; border-radius: 30px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;">Create Your Story</button>
-        </form>
-    </div>
-</div>
-
-  `;
+        </div>
+        `;
             document.body.appendChild(modal);
 
             // Open modal function
@@ -350,11 +358,18 @@
             // Close modal function
             window.closeStoryModal = function () {
                 modal.style.display = 'none';
+                document.getElementById('formContent').style.display = 'block';
+                document.getElementById('successContent').style.display = 'none';
             };
 
             // Handle form submission
             document.getElementById('storyForm').addEventListener('submit', function (event) {
                 event.preventDefault();
+
+                // Show loading state
+                document.getElementById('formContent').style.display = 'none';
+                document.getElementById('loadingIndicator').style.display = 'block';
+
                 const characterName = document.getElementById('characterName').value;
                 const characterType = document.getElementById('characterType').value;
                 const characterDescription = document.getElementById('characterDescription').value;
@@ -367,40 +382,40 @@
                         name: characterName,
                         description: `A ${characterType} who ${characterDescription}.`
                     }],
-                    pageCount: 12,
-                    childAge: 5, // Default child age
+                    pageCount: 5,
+                    childAge: 3,
                     lessons: [],
-                    writingStyle: 'Playful, light', // Default writing style
-                    artStyle: 'Watercolor', // Default art style
-                    obstacle: 'The character must solve a simple riddle.', // Example obstacle
+                    writingStyle: 'Playful, light',
+                    artStyle: 'Watercolor',
+                    obstacle: 'The character must solve a simple riddle.',
                     solution: 'The character finds the answer with help.',
                     ending: 'The character succeeds and learns a valuable lesson.',
                     genre: storyChoice
                 };
 
-                // Dummy API submission
-                fetch('https://dummyapi.com/build-story', {
+                // Simulate loading delay and API submission
+                fetch('http://localhost:3000/build-free-signup-story', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(storySeed)
+                    body: JSON.stringify({ storySeed, userEmail })
                 })
                     .then(response => {
-                        if (response.ok) {
-                            alert('Your story is being created! We will send it to your email shortly.');
-                            closeStoryModal();
-                        } else {
-                            alert('There was an issue creating your story. Please try again later.');
-                        }
+                        alert('There was an issue creating your story. Please try again later.');
+                        closeStoryModal();
+
                     })
                     .catch(() => {
                         alert('There was an error connecting to the server. Please try again.');
+                        closeStoryModal();
                     });
+                setTimeout(() => {
+                    document.getElementById('loadingIndicator').style.display = 'none';
+                    document.getElementById('successContent').style.display = 'block';
+                }, 2000);
             });
         })();
-
-
 
     </script>
 </body>
