@@ -349,6 +349,10 @@
         </div>
         `;
             document.body.appendChild(modal);
+            const BASE_API_URL = window.location.hostname === 'localhost' ?
+                'http://localhost:8080' :
+                'http://storybloom.eba-2m22kbdf.us-east-1.elasticbeanstalk.com';
+            // const BASE_API_URL = 'http://localhost:8080';
 
             // Open modal function
             window.openStoryModal = function () {
@@ -394,7 +398,7 @@
                 };
 
                 // Simulate loading delay and API submission
-                fetch('http://localhost:3000/build-free-signup-story', {
+                fetch(`${BASE_API_URL}/build-free-signup-story`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -402,9 +406,7 @@
                     body: JSON.stringify({ storySeed, userEmail })
                 })
                     .then(response => {
-                        alert('There was an issue creating your story. Please try again later.');
-                        closeStoryModal();
-
+                        // closeStoryModal();
                     })
                     .catch(() => {
                         alert('There was an error connecting to the server. Please try again.');
