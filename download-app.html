@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StoryBloom - Growing Minds Through Personalized Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="download-app.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,400i,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-transparent.png" type="image/x-icon">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Our App is Coming Soon</h1>
+        <p>We're putting the finishing touches on something amazing. Stay tuned for the release!</p>
+        <button id="notifyButton" class="button" onclick="confirmNotify()">Notify Me</button>
+    </div>
+
+    <script>
+        function confirmNotify() {
+            const button = document.getElementById('notifyButton');
+            button.classList.add('confirmed');
+            button.innerHTML = '✔ Confirmed';
+            button.disabled = true; // Prevent further clicks
+        }
+    </script>
+</body>
+</html>
