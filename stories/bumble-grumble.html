@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/000b6046-78e8-4539-bede-cc525af33ad4/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee buzzing around flowers.">
+            <p>Bumble was a happy bee.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/9a8868c7-e2b3-4fd0-999f-c485f817a551/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee bumping into a flower.">
+            <p>Bumble was also very clumsy.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/5da1349b-57c5-4165-b820-9f8d48b07204/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Grumble the grumpy, mean bumble bee frowning.">
+            <p>Grumble was always grumpy.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f3d7bd34-0677-48dc-83a3-ace5600ba834/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee accidentally knocking over a hive.">
+            <p>Bumble often made mistakes.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/c7b792b3-ccbe-49cf-839a-50717d5788c5/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Grumble the grumpy, mean bumble bee glaring at Bumble.">
+            <p>Grumble scowled at Bumble.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/c805dc1d-f239-4996-86d0-fb7bce4b4979/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee tipping over a honey jar.">
+            <p>Bumble spilled some honey.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/aff2a945-9d09-469b-847f-992b336962aa/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Grumble the grumpy, mean bumble bee with an even deeper frown on his face.">
+            <p>Grumble frowned harder.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a7de04b5-fe7a-4ae6-bbbf-d557b60819a5/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Grumble the grumpy, mean bumble bee tangled in some grass.">
+            <p>One day, Grumble was stuck.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/591d9898-f19a-494a-9484-55e9a3456a3a/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee rushing to help Grumble.">
+            <p>Bumble flew over quickly.</p>
+            <div class="page-number">Page 9</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/e3efd94e-fb7d-4985-b73f-3dee694ea81e/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee helping untangle Grumble.">
+            <p>Bumble helped free Grumble.</p>
+            <div class="page-number">Page 10</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/b95049dd-4e2b-4cf7-b994-f568b9d721b7/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Grumble the grumpy, mean bumble bee looking relieved as Bumble helps him.">
+            <p>Grumble was thankful.</p>
+            <div class="page-number">Page 11</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3bab3fbd-b78d-45e4-969c-be2e0b511c53/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Grumble the grumpy, mean bumble bee smiling at Bumble.">
+            <p>Grumble finally smiled.</p>
+            <div class="page-number">Page 12</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/77682d7e-ae0c-4fbc-8b7d-cf4ed51e0a5b/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children. Bumble the happy, clumsy bumble bee and Grumble the grumpy, mean bumble bee smiling together.">
+            <p>Both bees were happy now.</p>
+            <div class="page-number">Page 13</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

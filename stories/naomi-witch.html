@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lora', serif;
+        }
+
+        body, html {
+            height: 100%;
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+        }
+
+        .book-container {
+            width: 80%;
+            max-width: 1000px;
+            height: 90vh;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background: #ffffff;
+        }
+
+        .page.active {
+            opacity: 1;
+        }
+
+        .page h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .page p {
+            font-size: 1.5em;
+            color: #555;
+            max-width: 80%;
+            margin: 20px auto;
+        }
+
+        .page img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        .page-number {
+            font-size: 1.2em;
+            color: #777;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.7;
+        }
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 20px;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #777;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: color 0.3s;
+        }
+
+        .controls button:hover {
+            color: #333;
+        }
+
+        .controls button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="book-container">
+    <div class="page active">
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/d5f5c026-06d6-472d-b7a2-d24f364c7544/Leonardo_Phoenix_Abstract_childlike_watercolor_painting_style_0.jpg" alt="Abstract, childlike watercolor painting style; vibrant colors; loose brush strokes; simple shapes; whimsical and playful mood. Naomi the petite witch joyfully stepping out of her treehouse with a small bat perched on her shoulder. The forest is alive with colors and shapes. Naomi description: Include a petite witch with light brown hair and blue eyes. She has a fondness for bats, which is reflected in her clothing and accessories. Maybe you could have a small bat perched on her shoulder or stitched onto her hat.">
+        <p>Naomi the witch danced out of her cozy treehouse. Her blue eyes sparkled with excitement. Today, the forest whispered secrets, and she was ready to listen.</p>
+        <div class="page-number">Page 1</div>
+    </div>
+    <div class="page">
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/6ff85d88-984d-4702-84cc-c795e61491d2/Leonardo_Phoenix_Abstract_childlike_watercolor_painting_style_0.jpg" alt="Abstract, childlike watercolor painting style; vibrant colors; loose brush strokes; simple shapes; whimsical and playful mood. Naomi the petite witch talking to a wise owl that has landed in front of her, its wings spread wide, amidst tall trees. Naomi description: Include a petite witch with light brown hair and blue eyes. She has a fondness for bats, which is reflected in her clothing and accessories. Maybe you could have a small bat perched on her shoulder or stitched onto her hat.">
+        <p>A wise owl swooped down. It fluffed its feathers and asked, 'Naomi, can you solve the riddle? What gets wetter as it dries?'</p>
+        <div class="page-number">Page 2</div>
+    </div>
+    <div class="page">
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/6b4c6b01-5f94-454a-808c-16320e54d0be/Leonardo_Phoenix_Abstract_childlike_watercolor_painting_style_0.jpg" alt="Abstract, childlike watercolor painting style; vibrant colors; loose brush strokes; simple shapes; whimsical and playful mood. Naomi the petite witch standing in a sun-dappled clearing, deep in thought, surrounded by swirling leaves carried on a gentle breeze. Naomi description: Include a petite witch with light brown hair and blue eyes. She has a fondness for bats, which is reflected in her clothing and accessories. Maybe you could have a small bat perched on her shoulder or stitched onto her hat.">
+        <p>Naomi thought hard, her brow creased in concentration. She tapped her foot and looked up to the sky, her mind whirring.</p>
+        <div class="page-number">Page 3</div>
+    </div>
+    <div class="page">
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3858c4a2-c7a3-4b01-822d-34010dbf1f66/Leonardo_Phoenix_Abstract_childlike_watercolor_painting_style_0.jpg" alt="Abstract, childlike watercolor painting style; vibrant colors; loose brush strokes; simple shapes; whimsical and playful mood. Naomi the petite witch listening closely to the small bat perched on her shoulder, in a sunny glade with dappled shadows. Naomi description: Include a petite witch with light brown hair and blue eyes. She has a fondness for bats, which is reflected in her clothing and accessories. Maybe you could have a small bat perched on her shoulder or stitched onto her hat.">
+        <p>Her little bat friend chittered in her ear, reminding Naomi of her towel at home. Her eyes lit up, and she clapped.</p>
+        <div class="page-number">Page 4</div>
+    </div>
+    <div class="page">
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/55422c71-a68f-4a3d-9483-ab813008e87b/Leonardo_Phoenix_Abstract_childlike_watercolor_painting_style_0.jpg" alt="Abstract, childlike watercolor painting style; vibrant colors; loose brush strokes; simple shapes; whimsical and playful mood. Naomi the petite witch celebrating, twirling happily with her small bat, a wise owl watching with a proud expression, amidst vivid autumn leaves. Naomi description: Include a petite witch with light brown hair and blue eyes. She has a fondness for bats, which is reflected in her clothing and accessories. Maybe you could have a small bat perched on her shoulder or stitched onto her hat.">
+        <p>Naomi ran to the owl and shouted, 'A towel!' The owl hooted happily. Naomi laughed with joy and danced under the trees.</p>
+        <div class="page-number">Page 5</div>
+    </div>
+
+    <div class="controls">
+        <button id="prev" disabled>&#10094;</button>
+        <button id="next">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    const pages = document.querySelectorAll('.page');
+    let currentPage = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+        if (currentPage < pages.length - 1) {
+            pages[currentPage].classList.remove('active');
+            currentPage++;
+            pages[currentPage].classList.add('active');
+            updateButtons();
+        }
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        if (currentPage > 0) {
+            pages[currentPage].classList.remove('active');
+            currentPage--;
+            pages[currentPage].classList.add('active');
+            updateButtons();
+        }
+    });
+
+    function updateButtons() {
+        document.getElementById('prev').disabled = currentPage === 0;
+        document.getElementById('next').disabled = currentPage === pages.length - 1;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/c8192c72-8f34-4d5b-b72f-575198657ba7/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children Krista the dark haired white woman and Dean the dark haired white man working hard in a colorful garden with shovels and plants.">
+            <p>Krista and Dean worked hard in the garden.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/765832a2-fba5-4493-8976-69e06432671f/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children Poppy the small crazy bernedoodle trying to get Krista the dark haired white woman and Dean the dark haired white man's attention by jumping up and down.">
+            <p>Poppy wanted to play, but they didn't notice.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/4e2660a7-0cd3-4e4d-b871-ce6882974dfc/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children Mom the nice older lady sitting alone on a bench with a gentle expression.">
+            <p>Mom sat alone, wishing for fun.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/bfcffafc-947e-44c6-9bc8-fe5cea1063f1/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children Mom the nice older lady whispering to Poppy the small crazy bernedoodle under a tree in the garden.">
+            <p>Mom and Poppy made a plan.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/9f372745-a46a-48f2-a1a5-63dc36c50c4a/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children Mom the nice older lady and Poppy the small crazy bernedoodle presenting flowers to Krista the dark haired white woman and Dean the dark haired white man.">
+            <p>They surprised Krista and Dean with flowers.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f1e46e02-773a-4ff1-ae51-468196b1a744/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children Krista the dark haired white woman, Dean the dark haired white man, Poppy the small crazy bernedoodle, and Mom the nice older lady all laughing and playing together in the garden.">
+            <p>Everyone laughed and had fun together.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/cff11208-4852-4a73-9566-c8a05c9bb627/Leonardo_Phoenix_a_simple_water_color_style_illustration_Water_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Water color vibes. Colorful. Childlike and abstract for small children the colorful garden with all the characters smiling and hugging.">
+            <p>The garden was fuller with gratitude and love.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

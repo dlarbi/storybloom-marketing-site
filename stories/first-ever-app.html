@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lora', serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+        }
+
+        .book-container {
+            width: 80%;
+            max-width: 1000px;
+            height: 90vh;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background: #ffffff;
+        }
+
+        .page.active {
+            opacity: 1;
+        }
+
+        .page h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .page p {
+            font-size: 1.5em;
+            color: #555;
+            max-width: 80%;
+            margin: 20px auto;
+        }
+
+        .page img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        .page-number {
+            font-size: 1.2em;
+            color: #777;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.7;
+        }
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 20px;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #777;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: color 0.3s;
+        }
+
+        .controls button:hover {
+            color: #333;
+        }
+
+        .controls button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="book-container">
+
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/95ed899a-f8ad-44bf-842d-7bb31e1eae13/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_skipping_gleefull_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle skipping gleefully towards a colorful playground under a bright, sunny sky.">
+            <p>On a bright, sunny day, Poppy the Doodle skipped joyfully to the playground. It was their favorite place
+                to play and meet friends.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/1fd54aab-8721-4834-84e7-83be82ef4151/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_playing_hide_and_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle playing hide and seek with other colorful, happy animals in the playground.">
+            <p>The playground was full of laughter and fun. Poppy loved playing games with all their friends – hide and
+                seek, tag, and making sandcastles.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/6972d25c-7f8b-44c8-ba4d-ecbea28933ed/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_standing_nervousl_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle standing nervously while a large, ominous shadow looms near the playground swings.">
+            <p>But today, there was something different. Near the swings, Poppy noticed a big, scary shadow moving
+                slowly. Their heart began to race.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/d862cfc1-13c1-400c-910e-2d85b406f800/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_and_their_friends_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle and their friends standing in a group, looking worried at a big guy standing alone by the swings.">
+            <p>The shadow belonged to a big guy, someone new Poppy had never seen before. Everyone seemed scared of him
+                and stayed away.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/aa6b4ee1-1a1e-47c3-9d8c-27a5761a307d/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_walking_cautiousl_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle walking cautiously towards the big guy while friends watch from a distance.">
+            <p>Poppy was curious. Despite feeling a little scared, they decided to approach the big guy and say hello.
+                Maybe he wasn't so scary after all?</p>
+            <div class="page-number">Page 5</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/8273746f-b1fd-4064-b703-25a35e1c8292/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_looking_up_with_a_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle looking up with a friendly expression while the big guy looks surprised but gentle.">
+            <p>"Hi, I'm Poppy!" said Poppy with a friendly wag of the tail. The big guy looked down, surprised but not
+                unkind.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/8946cf4b-749d-4df3-b49b-b638282adde7/Leonardo_Phoenix_Watercolor_Max_a_large_but_kindlooking_animal_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Max, a large but kind-looking animal, introducing himself to Poppy the Doodle.">
+            <p>The big guy introduced himself as Max. He had just moved to the neighborhood and didn't know anyone yet.
+            </p>
+            <div class="page-number">Page 7</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3144dde2-ee3b-4ac0-9150-4b0639b718cd/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_leading_Max_towar_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle leading Max towards the other animals who are watching curiously.">
+            <p>Poppy realized that Max wasn't scary at all. He was just a bit shy and lonely. Poppy decided to introduce
+                Max to everyone.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/c0ba7d67-506c-488d-abbe-805ebbb855d9/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_standing_confiden_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle standing confidently, introducing Max to a group of hesitant but curious animals.">
+            <p>"Everyone, this is Max!" announced Poppy. At first, everyone was hesitant, but Poppy reassured them that
+                Max was friendly.</p>
+            <div class="page-number">Page 9</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/56e7c164-a547-4126-8222-67d30d0a2e71/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_Max_and_other_ani_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle, Max, and other animals beginning to play hide and seek, all looking happier.">
+            <p>To break the ice, Poppy suggested they all play a game together. Max smiled and agreed. Soon, they were
+                all playing hide and seek!</p>
+            <div class="page-number">Page 10</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/0270ca8c-94c6-4135-8489-0b495f722ea8/Leonardo_Phoenix_Watercolor_Max_cleverly_hiding_behind_a_large_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Max cleverly hiding behind a large tree while Poppy the Doodle and other animals search, all smiling.">
+            <p>Max turned out to be really good at hide and seek. He found the best hiding spots and had everyone
+                laughing with his clever moves.</p>
+            <div class="page-number">Page 11</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/4bffb777-2db8-4947-a896-d6ab87625a99/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_Max_and_other_ani_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle, Max, and other animals happily building a large and elaborate sandcastle in the sandbox.">
+            <p>Next, they built a giant sandcastle together. Max's big paws were perfect for shaping the tallest towers.
+            </p>
+            <div class="page-number">Page 12</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/9003ad56-4919-470b-8e8a-e58b2fbb1e50/Leonardo_Phoenix_Watercolor_Max_running_playfully_with_Poppy_t_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Max running playfully with Poppy the Doodle and other animals chasing him, all laughing.">
+            <p>They played tag, and Max was surprisingly fast. Poppy and the others couldn't stop laughing as they tried
+                to catch him.</p>
+            <div class="page-number">Page 13</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/5713f4b7-1934-4a08-a0ce-88a590281610/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_and_Max_sitting_t_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle and Max sitting together, sharing snacks and smiling warmly.">
+            <p>After all that fun, they sat down for a snack. Poppy shared their favorite treats with Max, who was very
+                grateful.</p>
+            <div class="page-number">Page 14</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/6e7c2e7a-2e25-4116-a39b-b8f4897e39f0/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_and_other_animals_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle and other animals sitting in a circle, laughing as Max shares a funny story.">
+            <p>They shared stories and jokes, learning that Max was not only kind but also very funny. Soon, everyone
+                felt at ease.</p>
+            <div class="page-number">Page 15</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/8b62bb6d-fd19-4752-abd8-7a7065eb6a33/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_Max_and_other_ani_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle, Max, and other animals playing happily together, showing signs of a growing friendship.">
+            <p>The more they played, the more they realized how much fun Max could be. He fit right into the group.</p>
+            <div class="page-number">Page 16</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/caae8692-3b64-4456-b7b5-75252349607f/Leonardo_Phoenix_Watercolor_Max_leading_Poppy_the_Doodle_and_o_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Max leading Poppy the Doodle and other animals in a fun game of leapfrog in the playground.">
+            <p>Max introduced everyone to his favorite game, leapfrog, and they all quickly picked it up, hopping around
+                joyfully.</p>
+            <div class="page-number">Page 17</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f5338457-343c-4101-9c99-ff1378b373bc/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_and_other_animals_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle and other animals surrounding Max, hugging and thanking him as the sun begins to set.">
+            <p>As the day came to an end, everyone agreed it was one of the best days at the playground. They all
+                thanked Max for joining them.</p>
+            <div class="page-number">Page 18</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3dc3ab0a-019f-43d5-aa98-3c9ebedaacb4/Leonardo_Phoenix_Watercolor_Max_smiling_brightly_as_Poppy_the_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Max smiling brightly as Poppy the Doodle and the other animals wave goodbye, signaling a friendly end to the day.">
+            <p>Max felt so happy and accepted. He couldn't wait to come back and play with his new friends again.</p>
+            <div class="page-number">Page 19</div>
+        </div>
+
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/19cd277a-fb8d-4dce-bd24-7f75ffb7574b/Leonardo_Phoenix_Watercolor_Poppy_the_Doodle_Max_and_other_ani_0.jpg"
+                alt="Illustration generated based on prompt: Watercolor: Poppy the Doodle, Max, and other animals playing together joyfully in the playground, a symbol of lasting friendship.">
+            <p>From that day on, Max was never alone. Poppy and the other animals became his best friends, and they all
+                played together every day.</p>
+            <div class="page-number">Page 20</div>
+        </div>
+
+
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+
+</body>
+
+</html>

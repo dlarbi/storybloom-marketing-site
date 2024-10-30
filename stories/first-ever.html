@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Book Reader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lora', serif;
+        }
+
+        body, html {
+            height: 100%;
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+        }
+
+        .book-container {
+            width: 80%;
+            max-width: 1000px;
+            height: 90vh;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background: #ffffff;
+        }
+
+        .page.active {
+            opacity: 1;
+        }
+
+        .page h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .page p {
+            font-size: 1.5em;
+            color: #555;
+            max-width: 80%;
+            margin: 20px auto;
+        }
+
+        .page img {
+            width: 60%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        .page-number {
+            font-size: 1.2em;
+            color: #777;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            opacity: 0.7;
+        }
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 20px;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            font-size: 2em;
+            color: #777;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: color 0.3s;
+        }
+
+        .controls button:hover {
+            color: #333;
+        }
+
+        .controls button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="book-container">
+    <!-- Page structure -->
+    <div class="page active">
+        <!-- <h1>Meeting Dancer</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/c2c985b4-0b2b-4867-89c8-66a67f63b00a/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_a_b_0.jpg" alt="Illustration">
+        <p>Once upon a time, there was a beautiful brown greyhound named Dancer who wore a wizard hat. She was very special and magical.</p>
+        <div class="page-number">Page 1</div>
+    </div>
+    <div class="page">
+        <!-- <h1>Berne Arrives</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/2b4dc44d-05c6-441f-bdec-a544c04b07b7/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_a_y_0.jpg" alt="Illustration">
+        <p>One sunny day, Loren brought home a young bernedoodle named Berne. He was brown and white and new to the world.</p>
+        <div class="page-number">Page 2</div>
+    </div>
+    <div class="page">
+        <!-- <h1>Dancer and Berne's Friendship</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/077b527f-7c1c-413c-a656-2809e261f873/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_Dan_0.jpg" alt="Illustration">
+        <p>Dancer and Berne quickly became friends. They played together every day, exploring the woods and fields.</p>
+        <div class="page-number">Page 3</div>
+    </div>
+    <div class="page">
+        <!-- <h1>Magical Adventures</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/486a4f28-a946-47a9-afcc-c6ebf88f849c/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_Dan_0.jpg" alt="Illustration">
+        <p>Dancer used her magic to show Berne wonderful things like flying leaves and talking flowers. Berne's eyes sparkled with wonder.</p>
+        <div class="page-number">Page 4</div>
+    </div>
+    <div class="page">
+        <!-- <h1>A Quiet Moment</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/532b2e1b-c269-447b-8c83-030ad7eb0a82/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_Dan_0.jpg" alt="Illustration">
+        <p>One evening, Dancer and Berne watched the sunset together. Dancer knew her time on earth was coming to an end.</p>
+        <div class="page-number">Page 5</div>
+    </div>
+    <div class="page">
+        <!-- <h1>Dancer's Farewell</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/fe4be0b2-e5a2-4079-a64c-c1a8cf9bc33f/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_Dan_0.jpg" alt="Illustration">
+        <p>With a gentle nuzzle and soft bark, Dancer said goodbye to Berne. She used her magic to make everything special for him.</p>
+        <div class="page-number">Page 6</div>
+    </div>
+    <div class="page">
+        <!-- <h1>Remembering Dancer</h1> -->
+        <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a550bd5e-142d-4aa6-a0a9-b3c03fde8193/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_Lor_0.jpg" alt="Illustration">
+        <p>Loren and Berne missed Dancer, but they remembered her love and magic. They were happy together, knowing she was always in their hearts.</p>
+        <div class="page-number">Page 7</div>
+    </div>
+
+    <!-- Navigation controls -->
+    <div class="controls">
+        <button id="prev" disabled>&#10094;</button>
+        <button id="next">&#10095;</button>
+    </div>
+</div>
+
+<script>
+    const pages = document.querySelectorAll('.page');
+    let currentPage = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+        if (currentPage < pages.length - 1) {
+            pages[currentPage].classList.remove('active');
+            currentPage++;
+            pages[currentPage].classList.add('active');
+            updateButtons();
+        }
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        if (currentPage > 0) {
+            pages[currentPage].classList.remove('active');
+            currentPage--;
+            pages[currentPage].classList.add('active');
+            updateButtons();
+        }
+    });
+
+    function updateButtons() {
+        document.getElementById('prev').disabled = currentPage === 0;
+        document.getElementById('next').disabled = currentPage === pages.length - 1;
+    }
+</script>
+
+</body>
+</html>

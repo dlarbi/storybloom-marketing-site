@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/1be33884-412b-4981-aa4e-e078c0fa5601/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle looking at new toys in the living room, with colorful and abstract shapes representing the toys scattered around.">
+            <p>Roscoe noticed more toys in the house. 'I must have been good,' he thought.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/2a236ad4-9298-4c25-95e9-b8d728a5f745/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Paul the brown haired man and Emily the strong, brown haired woman, smiling and whispering with Roscoe the giant white sheepadoodle looking on curiously.">
+            <p>Paul and Emily smiled, whispering about a secret. Roscoe was curious.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a06c264b-bedd-4cdd-b8d8-5bc92e4c1bcc/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle wagging his tail excitedly as more abstract toy shapes are delivered to the house.">
+            <p>More and more toys arrived. Roscoe wagged his tail in delight.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/612f5d51-0bd6-4585-a693-ae5ae6f76737/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Paul the brown haired man petting Roscoe the giant white sheepadoodle, with an aura of warmth around them.">
+            <p>'We love you, Roscoe,' Paul said, petting his head. Roscoe was happy.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/da388dba-3dd8-43cd-b543-868c526958be/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Emily the strong, brown haired woman with a rounded belly, and Roscoe the giant white sheepadoodle staying close to her.">
+            <p>Emily's belly grew rounder each day. Roscoe stayed close to her.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/14477ee1-d125-40e3-baae-2934d0fd3933/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle feeling the tiny kick from Emily the strong, brown haired woman's belly.">
+            <p>One evening, Roscoe felt a tiny kick from Emily's belly.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/cf743531-a432-4615-86fd-a51d2925b5c3/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. The abstract figure of a newborn baby wrapped in a blanket, with soft, colorful shapes around it symbolizing the arrival.">
+            <p>Then came a tiny cry. The baby had arrived!</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/6c43a093-2df5-4860-8d44-775623fe5162/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Paul the brown haired man and Emily the strong, brown haired woman holding Baby, with Roscoe the giant white sheepadoodle wagging his tail gently beside them.">
+            <p>Paul and Emily held Baby softly. Roscoe wagged his tail gently.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/75e04790-a9cf-41b5-a095-c54fa9ac9c52/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle sitting by Baby's cradle, with glowing and comforting shapes around them.">
+            <p>Roscoe sat by Baby's cradle, protecting the tiny new friend.</p>
+            <div class="page-number">Page 9</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f38f69f7-29e1-4bde-8d5b-772b917adea2/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle lying next to Baby, with abstract shapes symbolizing the passage of time.">
+            <p>Days turned into weeks. Baby and Roscoe grew closer.</p>
+            <div class="page-number">Page 10</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3f296be3-0a52-4d09-8150-1181de03bfab/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle playing near Baby, whose laughter fills the air with colorful shapes.">
+            <p>Baby's laughter filled the house. Roscoe's tail wagged faster.</p>
+            <div class="page-number">Page 11</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/19b07612-7027-4d0e-b9bf-0f23ee6c04e1/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle sitting near the toys, looking at Baby with understanding.">
+            <p>Roscoe realized the toys were for Baby, not just for him.</p>
+            <div class="page-number">Page 12</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/eb62510e-3d08-4fee-93a4-fb6a38de3bb9/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle and Baby crawling around the house, with vibrant, abstract illustrations of their playful adventures.">
+            <p>Together, they explored the house, finding new adventures each day.</p>
+            <div class="page-number">Page 13</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/813d83db-39d6-4827-9d5d-b19ab05dac3b/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Baby taking their first steps with Roscoe the giant white sheepadoodle close by, protecting and encouraging.">
+            <p>Baby grew stronger. Roscoe watched over every step.</p>
+            <div class="page-number">Page 14</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f63a414f-4ffb-4286-ac40-77be80e1d377/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Baby looking at Roscoe the giant white sheepadoodle while saying 'Ros...co!', with colorful shapes illustrating their deepening bond.">
+            <p>Baby's first word was 'Ros...co!'. The bond deepened.</p>
+            <div class="page-number">Page 15</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a1a8e960-4558-4c9e-8c0d-244188bda596/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle and Baby playing happily in the yard under the bright sun, with abstract shapes and colors of nature around them.">
+            <p>They played in the yard, a perfect pair in the sun.</p>
+            <div class="page-number">Page 16</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/2efab5f7-acf7-4658-a3ea-79e142277a55/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Baby throwing a ball for Roscoe the giant white sheepadoodle, with colorful shapes showing Roscoe's joyful chase.">
+            <p>Baby threw a ball for Roscoe, who chased it with joy.</p>
+            <div class="page-number">Page 17</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/fc21a17a-113c-4669-90f8-327754c43e89/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle bringing the ball back to Baby, who is clapping with excitement, surrounded by vibrant abstract shapes.">
+            <p>Roscoe brought the ball back, Baby clapped. They were best buds.</p>
+            <div class="page-number">Page 18</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/53d7e44f-58d1-4abf-bac3-44aeaa2541e7/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Roscoe the giant white sheepadoodle and Baby sitting together, side by side, with warm and comforting abstract colors.">
+            <p>Through all the changes, Roscoe and Baby stayed side by side.</p>
+            <div class="page-number">Page 19</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a9d24f5c-8076-4eba-8a5f-0f2ce831b929/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist water color. Paul the brown haired man, Emily the strong, brown haired woman, Baby, and Roscoe the giant white sheepadoodle sitting together watching the sunset, with a cohesive watercolor illustration showing their complete family.">
+            <p>As the sun set, Paul, Emily, Baby, and Roscoe felt complete.</p>
+            <div class="page-number">Page 20</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/505448ca-4ed2-4b5c-be72-5f34adf654a3/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Megan the young short brownish red haired woman with glasses and Archer the giant pitbull german shepherd mix exploring a mystical forest filled with colorful trees and floating lights.">
+            <p>In a land of wonders, Megan and Archer lived</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/ff1e065e-94fe-4129-a670-5ec90870aafe/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Megan the young short brownish red haired woman with glasses and Archer the giant pitbull german shepherd mix happily running through open meadows with magical creatures around them.">
+            <p>They played together every day, full of joy and laughter.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/728e3119-9197-4921-9a5f-3fc3336a22c3/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Archer the giant pitbull german shepherd mix lying down, looking sad and unwell, while magical shadows loom around him.">
+            <p>But one day, Archer felt uneasy, his tummy ached.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/1d71ec89-4d89-4543-a463-4c6b2778c02f/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Megan the young short brownish red haired woman with glasses kneeling beside Archer the giant pitbull german shepherd mix, offering comfort and a glowing remedy in her hand.">
+            <p>Megan saw her friend in pain and rushed to help.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/1970d488-7c2b-4463-824b-6098c5a91ac0/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Megan the young short brownish red haired woman with glasses mixing a glowing potion in a mystical cauldron, with sparkles and colors swirling around.">
+            <p>She brewed a magical tea, her love in every drop.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/0c850770-c1e1-44c3-8b89-a44668b1cbf5/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Archer the giant pitbull german shepherd mix sipping the glowing tea from a magical cup, with radiant light enveloping him.">
+            <p>Archer drank Megan's tea, feeling warmth and strength.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/eb7fa9bd-c6a0-482a-b9a2-813159698368/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Archer the giant pitbull german shepherd mix and Megan the young short brownish red haired woman with glasses playing in a field of vibrant flowers under a bright, rainbow sky.">
+            <p>With a wagging tail, Archer was back to play.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/5088390b-ba0c-4711-9f76-5398d6f7ad84/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract watercolor style. Mostly shapes and colors, rather than fully formed characters. No details. Minimalist watercolor. Megan the young short brownish red haired woman with glasses and Archer the giant pitbull german shepherd mix sitting together under a large, whimsical tree, surrounded by a peaceful, enchanted landscape.">
+            <p>Megan and Archer, best friends, together forevermore.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

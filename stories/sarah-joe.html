@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/bc28c0cd-b409-4b30-b336-8d2f1bc5c8fa/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Sarah and Joe packing their bags with clothes and small gifts, with a map of Michigan on the table.">
+            <p>Sarah and Joe pack their bags. They are going to visit Sarah's brother in Michigan.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a3581fb7-993a-43ab-800a-6ab426b36ce9/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Winston the tall oreo colored bernedoodle standing at the door, watching Sarah and Joe leave with sad eyes.">
+            <p>Winston watches them leave. He feels a little sad and lonely.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/5e22fc1c-206b-4c7a-9f4c-72f3d1e30020/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Sarah and Joe driving in a car past colorful trees and open countryside.">
+            <p>Sarah and Joe drive through the countryside. They see many beautiful trees.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/40ffb97e-1959-4985-83e4-227c131d872a/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Winston the tall oreo colored bernedoodle laying on his dog bed looking gloomy.">
+            <p>At home, Winston lays on his bed. He misses Sarah and Joe.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a79aec0a-5759-4742-883d-7b55c0778431/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Sarah and Joe meeting new friends in Michigan, standing outside near a tall apple tree.">
+            <p>In Michigan, Sarah and Joe meet many new friends. They smile and laugh.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/b1a3d258-0bd3-417f-8332-b4c2bb051d0c/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Winston the tall oreo colored bernedoodle dreaming of playing fetch with Sarah and Joe in a green park.">
+            <p>Winston dreams of playing with Sarah and Joe. He misses them so much.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f2f3e41d-ab30-4ee0-a201-8e0cebeb27df/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Sarah and Joe sipping apple cider and eating donuts at a cozy apple farm stand.">
+            <p>Sarah and Joe enjoy apple cider and donuts. They decide to bring some home.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3ee6e0a7-1963-4996-81fc-7f8c9eac0dad/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Sarah and Joe packing their car with bags and Michigan treats, ready to drive back home.">
+            <p>Sarah and Joe pack their bags again. They drive back home to Winston.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a30fd222-7ec6-42c4-868f-1c358b49acae/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Winston the tall oreo colored bernedoodle jumping with joy as Sarah and Joe walk in the door.">
+            <p>Winston hears the car. He jumps with joy when Sarah and Joe walk in.</p>
+            <div class="page-number">Page 9</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f19f6e3a-2236-4a78-90d5-c5a6db86b77a/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Winston the tall oreo colored bernedoodle sitting happily with a bowl of apple cider and donuts.">
+            <p>Sarah and Joe give Winston apple cider and donuts. Winston is so happy!</p>
+            <div class="page-number">Page 10</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/0d59e18a-2a04-48fa-a957-42dcd489a93d/Leonardo_Phoenix_a_simple_water_color_style_illustration_Color_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Colorful. Childlike and abstract for small children. Winston the tall oreo colored bernedoodle sitting cheerfully with a Michigan football scarf around his neck.">
+            <p>Winston loves the treats so much. He even becomes a Michigan football fan!</p>
+            <div class="page-number">Page 11</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

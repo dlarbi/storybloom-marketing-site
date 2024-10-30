@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3f66cf2e-0e77-4e6f-ba41-6a8d89ff69c9/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Dean, a tall dark brown haired friendly man, and Krista, a tall beautiful woman with dark brown hair, standing together in their backyard, holding garden tools">
+            <p>Dean and Krista woke up early with a big plan to plant a beautiful garden. They were excited to turn their backyard into a lovely oasis.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/27c8d8f3-0db9-4b7f-b4a5-283a77e4bc76/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Poppy, a small black and white bernedoodle, wearing a cape, sitting on the grass next to Dean and Krista as they work in the garden">
+            <p>They worked together all morning, digging holes and planting seeds. Poppy, their little bernedoodle in a cape, watched them happily.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/34d965c0-9bf8-40c9-989a-65778473b3ae/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Dean, a tall dark brown haired friendly man, and Krista, a tall beautiful woman with dark brown hair, looking tired and sitting on the ground with garden tools scattered around them">
+            <p>By afternoon, the sun was hot and Dean and Krista were tired. They looked around and saw there was still so much to do. They felt discouraged.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/f41020a1-ff04-472f-a71f-43c1ba9e2d05/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Poppy, a small black and white bernedoodle, wearing a cape, running around the yard, looking joyful and energetic">
+            <p>Poppy sensed their sadness. She zoomed around the yard in her cape, wagging her tail and barking happily. Her joy was contagious.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/84d4c111-4224-455b-ba1c-8a23471a0be5/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Dean, a tall dark brown haired friendly man, and Krista, a tall beautiful woman with dark brown hair, smiling and looking at each other with renewed energy as they watch Poppy play">
+            <p>Watching Poppy play, Dean and Krista smiled and felt their spirits lift. They remembered how much fun they were having together. They decided to keep going.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/1d24ae22-9e5c-4595-8b51-307f92fa63e8/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Dean, a tall dark brown haired friendly man, and Krista, a tall beautiful woman with dark brown hair, planting the last flower in the garden with satisfied smiles">
+            <p>With renewed energy, they put the finishing touches on their garden. It was hard work, but they felt proud of what they had accomplished together.</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/31a00ee7-13e1-4787-913a-8d92671a84bc/Leonardo_Phoenix_a_watercolor_illustration_with_low_detail_in_0.jpg" alt="Illustration generated based on prompt: a watercolor illustration with low detail, in the style of a children's book. Dean, a tall dark brown haired friendly man, Krista, a tall beautiful woman with dark brown hair, and Poppy, a small black and white bernedoodle, wearing a cape, sitting together in the garden, looking happy and content">
+            <p>They all sat in the garden and enjoyed the beauty they had created. "All of us," Poppy barked, and they laughed, feeling lucky to have each other.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

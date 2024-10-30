@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/0d1b28c9-ae9c-42eb-83cd-f732e8b3a08f/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, looking at the night sky filled with stars and imaginary planets.">
+            <p>Megan loved space. She always dreamt of visiting new planets.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a81cb36a-2ced-42c1-9a87-64d652365348/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, playing with Archer, a scary looking pitbull german shepherd mix, in a grassy backyard.">
+            <p>Megan had a companion—Archer, a dog that looked fierce but was as gentle as a breeze.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/8f7aeae1-5cb3-48e2-b3b6-5d99240547f8/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, and Archer, a scary looking pitbull german shepherd mix, discovering a spaceship in their backyard.">
+            <p>One day, Megan and Archer found a mysterious spaceship in their yard.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/44b93e20-1f60-4591-a9be-fd82a3639fc0/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, and Archer, a scary looking pitbull german shepherd mix, inside a spaceship lifting off the ground.">
+            <p>They stepped inside, pressed some buttons, and WHOOSH! They zoomed off to another world.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/02d009d1-37fe-4409-88f0-e3871c0f2360/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, and Archer, a scary looking pitbull german shepherd mix, being met by shocked aliens upon landing.">
+            <p>They landed on Planet Zog. The alien inhabitants gasped at the sight of Archer.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/99097eb1-7995-469e-b6bb-53cd9fc7bfcc/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, and Archer, a scary looking pitbull german shepherd mix, standing sadly as the aliens whisper and avoid Archer.">
+            <p>The aliens avoided Archer, whispering, 'He's too scary!'</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/cb7d4f13-6bfc-4357-be49-b2b7fa095dc0/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, holding a colorful bow tie near the spaceship entrance.">
+            <p>Megan had an idea. She found a bright bow tie in the spaceship.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/5da7337e-053a-467a-bd76-cac3105bb213/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, putting a bow tie on Archer, a scary looking pitbull german shepherd mix.">
+            <p>With a flourish, she tied the bow tie on Archer.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/d2d67ec3-fdaf-4b01-bd03-96b8c2306078/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, smiling as Archer, a scary looking pitbull german shepherd mix with a bow tie, is surrounded by happy aliens.">
+            <p>The aliens giggled and gathered around Archer, now looking friendly.</p>
+            <div class="page-number">Page 9</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a47a26b6-57a7-4675-ae28-ea30f7812559/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, Archer, a scary looking pitbull german shepherd mix with a bow tie, and aliens enjoying a feast together.">
+            <p>They celebrated with a feast. The aliens realized their mistake.</p>
+            <div class="page-number">Page 10</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/2ea5f10d-1d60-410b-8ae9-24c44c7d146c/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, and Archer, a scary looking pitbull german shepherd mix with a bow tie, waving goodbye to the aliens.">
+            <p>It was time to say goodbye. Megan and Archer promised to visit again.</p>
+            <div class="page-number">Page 11</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/a6cbcfb0-5864-4bb0-9ea7-f9257435782f/Leonardo_Phoenix_Every_element_in_the_image_should_be_in_a_chi_0.jpg" alt="Illustration generated based on prompt: Every element in the image should be in a childlike and abstract water color style. Remember to keep it childlike and simple, not detailed. One cohesive watercolor illustration of Megan, a young short brownish red haired woman with glasses, and Archer, a scary looking pitbull german shepherd mix with a bow tie, looking up at the starry sky with a spaceship in the background.">
+            <p>Back on Earth, they had newfound friends in the stars.</p>
+            <div class="page-number">Page 12</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>

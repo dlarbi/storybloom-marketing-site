@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Lora', serif;
+            }
+    
+            body, html {
+                height: 100%;
+                background: #f7f7f7;
+                display: flex;
+                align-items: center;
+            }
+    
+            .book-container {
+                width: 80%;
+                max-width: 1000px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+            }
+    
+            .page {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                background: #ffffff;
+            }
+    
+            .page.active {
+                opacity: 1;
+            }
+    
+            .page h1 {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .page p {
+                font-size: 1.5em;
+                color: #555;
+                max-width: 80%;
+                margin: 20px auto;
+            }
+    
+            .page img {
+                width: 60%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px auto;
+            }
+    
+            .page-number {
+                font-size: 1.2em;
+                color: #777;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0.7;
+            }
+    
+            .controls {
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 0 20px;
+            }
+    
+            .controls button {
+                background: none;
+                border: none;
+                font-size: 2em;
+                color: #777;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: color 0.3s;
+            }
+    
+            .controls button:hover {
+                color: #333;
+            }
+    
+            .controls button:disabled {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="book-container">
+        
+        <div class="page active">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/87cdf49d-9975-4ea6-b7f9-35ec62a5df1c/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, working together, surrounded by tools and scrap parts as they build Willie, a cute, cube shaped robot.">
+            <p>Patrick and Dean built a robot.</p>
+            <div class="page-number">Page 1</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/50e27426-c035-4e0e-a306-c88770a34022/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, sweating and looking determined as they continue to assemble Willie, a cute, cube shaped robot, in the workshop.">
+            <p>They worked hard all day long.</p>
+            <div class="page-number">Page 2</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/1313a3d0-6039-4bca-87f3-06b1d00b4147/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, admiring Willie, a cute, cube shaped robot, who is starting to show signs of life, with a tiny spark of light in his eyes.">
+            <p>Willie was very special.</p>
+            <div class="page-number">Page 3</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/3a959059-f57c-40d7-b17d-cf5905011a6e/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, sitting exhausted on the floor, tools scattered around, both looking worn out and sleepy.">
+            <p>But Patrick and Dean were tired.</p>
+            <div class="page-number">Page 4</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/9b9e3751-eb1d-4a83-9d35-af72e6fe7840/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, sitting apart from each other, looking sad and thoughtful, with Willie, a cute, cube shaped robot, lying quietly between them.">
+            <p>They did not talk for a long time.</p>
+            <div class="page-number">Page 5</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/0972baaf-f704-47a8-9a3c-9d74d1e95d17/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Willie, a cute, cube shaped robot, coming to life with bright, glowing eyes and little sparks, starting to move and look around curiously while Patrick and Dean watch in amazement.">
+            <p>One day, Willie woke up!</p>
+            <div class="page-number">Page 6</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/54da176e-ca4d-4971-81a9-b01befc720f1/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Willie, a cute, cube shaped robot, using colorful paints and brushes, creating abstract, vibrant paintings on a canvas while Patrick and Dean smile joyfully.">
+            <p>Willie began to make art.</p>
+            <div class="page-number">Page 7</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/d72e9a6f-6dcb-430d-9156-7a4743bfb9a8/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, looking at Willie's colorful artworks, their faces lighting up with newfound excitement and ideas.">
+            <p>Patrick and Dean were inspired.</p>
+            <div class="page-number">Page 8</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/4183d534-4c2e-4fbe-9c97-6f99505d5f14/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, sitting close together, discussing passionately while pointing at a blueprint with Willie, a cute, cube shaped robot, nearby.">
+            <p>They shared new ideas.</p>
+            <div class="page-number">Page 9</div>
+        </div>
+        
+        <div class="page ">
+            <img src="https://cdn.leonardo.ai/users/94a19d6a-b606-4ae3-a7a7-6e4cdf6d82a0/generations/e0fb8208-6da3-4338-867b-951d48ac4b41/Leonardo_Phoenix_a_simple_water_color_style_illustration_Very_0.jpg" alt="Illustration generated based on prompt: a simple water color style illustration. Very simple low fidelity water color for small kids. Water color vibes. Colorful. Childlike and abstract for small children; Patrick, a smart young man with brown hair, and Dean, a tall young man with dark hair, smiling widely and high-fiving, with Willie, a cute, cube shaped robot, in between them, beaming happily.">
+            <p>Patrick and Dean were happy again.</p>
+            <div class="page-number">Page 10</div>
+        </div>
+        
+    
+        <div class="controls">
+            <button id="prev" disabled>&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+    
+    <script>
+        const pages = document.querySelectorAll('.page');
+        let currentPage = 0;
+    
+        document.getElementById('next').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                pages[currentPage].classList.remove('active');
+                currentPage++;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            if (currentPage > 0) {
+                pages[currentPage].classList.remove('active');
+                currentPage--;
+                pages[currentPage].classList.add('active');
+                updateButtons();
+            }
+        });
+    
+        function updateButtons() {
+            document.getElementById('prev').disabled = currentPage === 0;
+            document.getElementById('next').disabled = currentPage === pages.length - 1;
+        }
+    </script>
+    
+    </body>
+    </html>
