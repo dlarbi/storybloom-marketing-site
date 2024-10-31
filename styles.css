@@ -70,13 +70,24 @@ nav .btn:hover {
     background-image: url('images/willie.jpg');
     background-size: cover;
     background-position: center;
-    padding: 13rem 0 3rem 0;
+    padding: 8rem 0 3rem 0;
     color: #fff;
     text-align: left;
     position: relative;
-    height: 900px;
+    height: 700px;
+    text-align: center;
+}
+.btn-cta.btn-primary .icon {
+    font-size: 1.2rem;
+    margin-left: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
 }
 
+.btn-cta.btn-primary:hover .icon {
+    transform: rotate(15deg); /* Adds a slight rotation on hover */
+}
 .hero-fader {
     position: absolute;
     top: 0;
@@ -95,12 +106,15 @@ nav .btn:hover {
     line-height: 5.5rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero h3 {
     font-weight: 100;
     max-width: 700px;
     margin-bottom: 2em;
+    margin: 0 auto;
     line-height: 2.1rem;
 }
 
@@ -119,6 +133,50 @@ nav .btn:hover {
     font-style: normal;
     font-size: 20px;
 }
+
+.character-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.character-input {
+    width: 250px;
+    padding: 12px;
+    border: 2px solid transparent; /* Initial border (invisible) */
+    border-radius: 25px;
+    font-size: 1rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.character-input:focus {
+    border-color: #4caf50; /* Green border on focus */
+    box-shadow: 0px 4px 20px rgba(72, 100, 230, 0.3), 0 0 8px rgba(76, 175, 80, 0.4); /* Adds a subtle green glow */
+    outline: none;
+}
+
+.btn-cta.btn-primary {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to left, #6eb6ff, #4864e6);
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-cta.btn-primary:hover {
+    background: linear-gradient(to right, #4864e6, #6eb6ff);
+    transform: scale(1.05);
+}
+
 
 .btn-cta {
     background: linear-gradient(to left, #6eb6ff, #4864e6); /* Light blue to darker blue gradient */
@@ -656,6 +714,14 @@ footer .footer-links a:hover {
         font-size: 3.5rem;  /* Reducing font size on mobile */
         line-height: 3rem;  /* Adjusting line height for better readability */
         margin: 3rem auto 1rem auto;  /* Moving up the hero text */
+    }
+
+    .btn-cta.btn-primary {
+        width: 100%;
+    }
+
+    .character-input {
+        width: 100%;
     }
 
     .features .feature-grid,
