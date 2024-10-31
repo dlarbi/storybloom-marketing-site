@@ -66,7 +66,7 @@
             <div class="character-input-wrapper">
                 <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
                     class="character-input">
-                <button class="btn-cta btn-primary" onclick="populateAndOpenModal()">
+                <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroCharacterName')">
                     Create a story <span class="icon">🌸</span>
                 </button>
             </div>
@@ -83,7 +83,17 @@
                 <div class="flex-item text-right">
                     <h3>Build your own world</h3>
                     <p>Imagine the characters, values, themes, and writing style you want to cultivate. Select from a
-                        variety of morals and life lessons for different ages.</p>
+                        variety
+                        of morals and life lessons for different ages.</p>
+
+                    <!-- CTA Instance -->
+                    <div class="character-input-wrapper">
+                        <input type="text" placeholder="Enter a Character Name..." class="character-input"
+                            id="howItWorksCharacterName">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('howItWorksCharacterName')">
+                            Create a story <span class="icon">🌸</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -116,6 +126,13 @@
                     <p>Unlike the bland, AI-generated art style you'll find from other children's book creators,
                         StoryBloom stories feature beautiful, artful illustrations that truly match the essence of your
                         beloved characters.</p>
+                    <div class="character-input-wrapper">
+                        <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
+                            class="character-input">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroCharacterName')">
+                            Create a story <span class="icon">🌸</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="flex-item image-right">
                     <img src="images/reader-iphone.png" alt="Reader">
@@ -372,14 +389,14 @@
                 'http://localhost:8080' :
                 'https://api.storybloom.me';
 
-            window.populateAndOpenModal = function () {
+            window.populateAndOpenModal = function (inputId) {
                 gtag('event', 'clicked hero cta', {
                     'event_category': 'engagement',
                     'event_label': 'Hero CTA',
                 });
-                const heroCharacterName = document.getElementById('heroCharacterName').value;
+                const characterName = document.getElementById(inputId).value;
                 openStoryModal();
-                document.getElementById('characterName').value = heroCharacterName;
+                document.getElementById('characterName').value = characterName;
             }
 
             window.openStoryModal = function () {
