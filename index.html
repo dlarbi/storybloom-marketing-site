@@ -64,7 +64,8 @@
 
             <!-- New Character Name Input and Try It Now Button -->
             <div class="character-input-wrapper">
-                <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..." class="character-input">
+                <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
+                    class="character-input">
                 <button class="btn-cta btn-primary" onclick="populateAndOpenModal()">
                     Create a story <span class="icon">🌸</span>
                 </button>
@@ -370,17 +371,14 @@
             const BASE_API_URL = window.location.hostname === 'localhost' ?
                 'http://localhost:8080' :
                 'https://api.storybloom.me';
-            // const BASE_API_URL = 'http://localhost:8080';
 
-            // Open modal function
             window.populateAndOpenModal = function () {
-                // Get the character name from the hero section input
+                gtag('event', 'clicked hero cta', {
+                    'event_category': 'engagement',
+                    'event_label': 'Hero CTA',
+                });
                 const heroCharacterName = document.getElementById('heroCharacterName').value;
-
-                // Open the modal
                 openStoryModal();
-
-                // Set the modal's Character Name input to the hero section value
                 document.getElementById('characterName').value = heroCharacterName;
             }
 
@@ -388,7 +386,6 @@
                 modal.style.display = 'block';
             };
 
-            // Close modal function
             window.closeStoryModal = function () {
                 modal.style.display = 'none';
                 document.getElementById('formContent').style.display = 'block';
