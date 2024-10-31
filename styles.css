@@ -79,6 +79,7 @@ nav .btn:hover {
 }
 .btn-cta.btn-primary .icon {
     font-size: 1.2rem;
+    line-height: 1rem;
     margin-left: 8px;
     display: inline-block;
     vertical-align: middle;
@@ -144,7 +145,7 @@ nav .btn:hover {
 
 .character-input {
     width: 250px;
-    padding: 12px;
+    padding: 10px;
     border: 2px solid transparent; /* Initial border (invisible) */
     border-radius: 25px;
     font-size: 1rem;
