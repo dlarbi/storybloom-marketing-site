@@ -135,6 +135,13 @@ nav .btn:hover {
     font-size: 20px;
 }
 
+.character-input::placeholder {
+    font-size: 0.8rem; /* Adjust size as desired */
+    color: #a0a0a0; /* Optional: Make the color a bit softer */
+    opacity: 1; /* Ensures consistent appearance across browsers */
+}
+
+
 .character-input-wrapper {
     display: flex;
     align-items: center;

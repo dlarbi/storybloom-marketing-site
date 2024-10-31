@@ -64,8 +64,7 @@
 
             <!-- New Character Name Input and Try It Now Button -->
             <div class="character-input-wrapper">
-                <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
-                    class="character-input">
+                <input type="text" id="heroCharacterName" placeholder="Enter a Character Name" class="character-input">
                 <button class="btn-cta btn-primary" onclick="populateAndOpenModal()">
                     Try it Now <span class="icon">🌸</span>
                 </button>
@@ -364,6 +363,9 @@
         </div>
         </div>
         `;
+            window.addEventListener('DOMContentLoaded', (event) => {
+                document.getElementById('heroCharacterName').focus();
+            });
             document.body.appendChild(modal);
             const BASE_API_URL = window.location.hostname === 'localhost' ?
                 'http://localhost:8080' :
