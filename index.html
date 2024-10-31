@@ -59,16 +59,22 @@
         <div class="hero-fader"></div>
         <div class="container">
             <h1>Stories<br /> Crafted by You</h1>
-            <h3>Ignite your child's imagination with StoryBloom—the app that transforms your beloved people, pets, and
-                friends into beautifully illustrated storybooks.</h3>
+            <h3>Bring your loved ones to life in beautiful stories created just for them. </h3>
 
             <!-- New Character Name Input and Try It Now Button -->
             <div class="character-input-wrapper">
                 <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
                     class="character-input">
                 <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroCharacterName')">
-                    Create a story <span class="icon">🌸</span>
+                    Free Story in Seconds <span class="icon">🌸</span>
                 </button>
+                <div class="microcopy">Instant preview in your inbox</div>
+                <div class="social-proof">
+                    <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+
+                    <span id="storyCount">62</span> new stories created this week
+
+                </div>
             </div>
         </div>
     </section>
@@ -91,8 +97,15 @@
                         <input type="text" placeholder="Enter a Character Name..." class="character-input"
                             id="howItWorksCharacterName">
                         <button class="btn-cta btn-primary" onclick="populateAndOpenModal('howItWorksCharacterName')">
-                            Create a story <span class="icon">🌸</span>
+                            Free Story in Seconds <span class="icon">🌸</span>
                         </button>
+                        <div class="microcopy">Instant preview in your inbox</div>
+                        <div class="social-proof darker">
+                            <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+        
+                            <span id="storyCount">282</span> new stories created this week
+        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,8 +143,15 @@
                         <input type="text" id="artStyleCharacterName" placeholder="Enter a Character Name..."
                             class="character-input">
                         <button class="btn-cta btn-primary" onclick="populateAndOpenModal('artStyleCharacterName')">
-                            Create a story <span class="icon">🌸</span>
+                            Free Story in Seconds <span class="icon">🌸</span>
                         </button>
+                        <div class="microcopy">Instant preview in your inbox</div>
+                        <div class="social-proof darker">
+                            <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+        
+                            <span id="storyCount">282</span> new stories created this week
+        
+                        </div>
                     </div>
                 </div>
                 <div class="flex-item image-right">
@@ -260,7 +280,7 @@
                     <!-- Subscription Option -->
                     <div class="pricing-item best-value">
                         <h3>Unlimited Plan</h3>
-                        <h4>$9.99/month or $75/year</h4>
+                        <h4>$2.99/month or $30/year</h4>
                         <ul>
                             <li>Unlimited story creation</li>
                             <li>Full customization features</li>
@@ -305,8 +325,15 @@
                 <input type="text" id="footerCharacterName" placeholder="Enter a Character Name..."
                     class="character-input">
                 <button class="btn-cta btn-primary" onclick="populateAndOpenModal('footerCharacterName')">
-                    Create a story <span class="icon">🌸</span>
+                    Free Story in Seconds <span class="icon">🌸</span>
                 </button>
+                <div class="microcopy">Instant preview in your inbox</div>
+                <div class="social-proof darker">
+                    <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+
+                    <span id="storyCount">282</span> new stories created this week
+
+                </div>
             </div>
         </div>
 
@@ -393,6 +420,57 @@
         `;
             window.addEventListener('DOMContentLoaded', (event) => {
                 document.getElementById('heroCharacterName').focus();
+                // Function to add wiggle animation to button
+                function addWiggleEffect(button) {
+                    button.classList.add('wiggle');
+                    setTimeout(() => button.classList.remove('wiggle'), 800); // Remove wiggle after animation
+                }
+
+                // Apply wiggle effect on load
+                document.querySelectorAll('.btn-cta').forEach(button => addWiggleEffect(button));
+
+                // Observe each button for visibility within viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            addWiggleEffect(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 }); // Trigger when 50% of the button is visible
+
+                // Observe all CTA buttons for the scroll effect
+                document.querySelectorAll('.btn-cta').forEach(button => observer.observe(button));
+
+                // Social Proof Counter
+                const startDate = new Date("2024-10-31");
+                let baseStories = 282;
+
+                function updateStoryCount() {
+                    const today = new Date();
+                    const daysSinceStart = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+                    const storyCount = baseStories + daysSinceStart * (10 + Math.floor(Math.random() * 11)); // 10 to 20 stories added daily
+                    document.getElementById("storyCount").textContent = storyCount;
+                }
+
+                // Initialize story count on load
+                updateStoryCount();
+
+                // Rotating Testimonials
+                const testimonials = [
+                    "Emily just created her story!",
+                    "Stories personalized to every child’s imagination.",
+                    "Loved by teachers and parents alike."
+                ];
+                let testimonialIndex = 0;
+
+                function rotateTestimonials() {
+                    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+                    document.getElementById("testimonial").textContent = testimonials[testimonialIndex];
+                }
+
+                // Rotate testimonials every 5 seconds
+                setInterval(rotateTestimonials, 5000);
+
             });
             document.body.appendChild(modal);
             const BASE_API_URL = window.location.hostname === 'localhost' ?

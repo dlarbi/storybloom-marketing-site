@@ -20,13 +20,16 @@ body {
     margin: 0 auto;
     position: relative;
 }
+
 .logo-wrapper {
     display: flex;
     align-items: center;
 }
+
 .logo-wrapper img {
-    margin-right:15px;
+    margin-right: 15px;
 }
+
 /* Navigation */
 nav {
     position: absolute;
@@ -77,6 +80,7 @@ nav .btn:hover {
     height: 700px;
     text-align: center;
 }
+
 .btn-cta.btn-primary .icon {
     font-size: 1.2rem;
     line-height: 1rem;
@@ -87,8 +91,77 @@ nav .btn:hover {
 }
 
 .btn-cta.btn-primary:hover .icon {
-    transform: rotate(15deg); /* Adds a slight rotation on hover */
+    transform: rotate(15deg);
+    /* Adds a slight rotation on hover */
 }
+
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+.btn-cta.wiggle {
+    animation: wiggle 0.8s ease-in-out;
+}
+
+.microcopy {
+    font-size: 0.85rem;
+    color: #c2c2c2;
+    margin-top: 4px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.social-proof {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.social-proof.darker {
+    color: #555;
+}
+/* .social-proof {
+    font-size: 1rem;
+    color: white;
+    margin-top: 12px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+} */
+
+.checkmark-icon {
+    font-size: 1.2rem; /* Slightly larger for emphasis */
+    position: relative;
+    top: 6px!important;
+    color: #28a745; /* Green color for checkmark */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+#testimonial {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #fff;
+    margin-top: 5px;
+}
+
 .hero-fader {
     position: absolute;
     top: 0;
@@ -125,7 +198,8 @@ nav .btn:hover {
 }
 
 .btn-primary {
-    background: linear-gradient(to left, #6eb6ff, #4864e6); /* Light blue to darker blue gradient */
+    background: linear-gradient(to left, #6eb6ff, #4864e6);
+    /* Light blue to darker blue gradient */
     color: #fff;
     padding: 0.75rem 2rem;
     border-radius: 50px;
@@ -136,9 +210,12 @@ nav .btn:hover {
 }
 
 .character-input::placeholder {
-    font-size: 0.8rem; /* Adjust size as desired */
-    color: #a0a0a0; /* Optional: Make the color a bit softer */
-    opacity: 1; /* Ensures consistent appearance across browsers */
+    font-size: 0.8rem;
+    /* Adjust size as desired */
+    color: #a0a0a0;
+    /* Optional: Make the color a bit softer */
+    opacity: 1;
+    /* Ensures consistent appearance across browsers */
 }
 
 
@@ -152,7 +229,8 @@ nav .btn:hover {
 .character-input {
     width: 250px;
     padding: 10px;
-    border: 2px solid transparent; /* Initial border (invisible) */
+    border: 2px solid transparent;
+    /* Initial border (invisible) */
     border-radius: 25px;
     font-size: 1rem;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
@@ -162,8 +240,10 @@ nav .btn:hover {
 }
 
 .character-input:focus {
-    border-color: #4caf50; /* Green border on focus */
-    box-shadow: 0px 4px 20px rgba(72, 100, 230, 0.3), 0 0 8px rgba(76, 175, 80, 0.4); /* Adds a subtle green glow */
+    border-color: #4caf50;
+    /* Green border on focus */
+    box-shadow: 0px 4px 20px rgba(72, 100, 230, 0.3), 0 0 8px rgba(76, 175, 80, 0.4);
+    /* Adds a subtle green glow */
     outline: none;
 }
 
@@ -187,7 +267,8 @@ nav .btn:hover {
 
 
 .btn-cta {
-    background: linear-gradient(to left, #6eb6ff, #4864e6); /* Light blue to darker blue gradient */
+    background: linear-gradient(to left, #6eb6ff, #4864e6);
+    /* Light blue to darker blue gradient */
     color: #fff;
     padding: 0.75rem 2rem;
     border-radius: 50px;
@@ -200,7 +281,7 @@ nav .btn:hover {
 
 .content-wrapper {
     background: linear-gradient(to right, white, #eaeefc, white);
-  }
+}
 
 .material-symbols-outlined {
     position: relative;
@@ -287,25 +368,29 @@ section p.blurb {
 
 .how-it-works .container {
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: center;
+    /* Center vertically */
 }
 
 .flex-item {
     flex: 1;
 }
 
-.image-left, .image-right {
+.image-left,
+.image-right {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-left img, .image-right img {
+.image-left img,
+.image-right img {
     width: 250px;
     border-radius: 40px;
 }
 
-.text-left, .text-right {
+.text-left,
+.text-right {
     padding: 50px;
 }
 
@@ -317,7 +402,8 @@ section p.blurb {
     padding-right: 100px;
 }
 
-.text-left p, .text-right p {
+.text-left p,
+.text-right p {
     line-height: 2.3rem;
 }
 
@@ -341,7 +427,9 @@ section p.blurb {
     background-color: #cdc0e6;
 }
 
-.step.step1 p, .step.step1 h3, .step.step1 .card_icon {
+.step.step1 p,
+.step.step1 h3,
+.step.step1 .card_icon {
     color: #2C3E50;
 }
 
@@ -349,15 +437,20 @@ section p.blurb {
     background-color: #f3ce43;
 }
 
-.step.step3 p, .step.step3 h3, .step.step3 .card_icon {
+.step.step3 p,
+.step.step3 h3,
+.step.step3 .card_icon {
     color: #2C3E50;
 }
 
 .step4 {
-    background-color: #ad95dd; /* Soft purple background */
+    background-color: #ad95dd;
+    /* Soft purple background */
 }
 
-.step.step4 p, .step.step4 h3, .step.step4 .card_icon {
+.step.step4 p,
+.step.step4 h3,
+.step.step4 .card_icon {
     color: #ffffff;
 }
 
@@ -366,12 +459,14 @@ section p.blurb {
 }
 
 .step:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
+    transform: translateY(-10px);
+    /* Slight lift on hover */
 }
 
 /* Icon Wrapper */
 .icon-wrapper {
-    background-color: rgba(255, 255, 255, 0.2); /* Faded circle background */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Faded circle background */
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -382,7 +477,8 @@ section p.blurb {
 }
 
 .icon-wrapper i {
-    font-size: 36px; /* Icon size */
+    font-size: 36px;
+    /* Icon size */
     color: #fff;
 }
 
@@ -398,7 +494,8 @@ section p.blurb {
 .step p {
     font-family: 'Roboto', sans-serif;
     font-size: 0.9rem;
-    color: #f0f0f0; /* Lighter gray text */
+    color: #f0f0f0;
+    /* Lighter gray text */
 }
 
 .material-symbols-outlined.card_icon {
@@ -411,7 +508,8 @@ section p.blurb {
 .testimonials {
     padding: 6rem 0;
     text-align: center;
-    font-family: 'Montserrat', sans-serif; /* Modern font */
+    font-family: 'Montserrat', sans-serif;
+    /* Modern font */
 }
 
 .testimonials h2 {
@@ -424,26 +522,34 @@ section p.blurb {
 /* Testimonial Grid */
 .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Flexible grid layout */
-    gap: 3rem; /* Spacing between grid items */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Flexible grid layout */
+    gap: 3rem;
+    /* Spacing between grid items */
 }
 
 /* Testimonial Item */
 .testimonial-item {
     background: #ffffff;
-    border: 1px solid #eaeaea; /* Subtle border */
-    border-radius: 20px; /* Soft rounded corners */
+    border: 1px solid #eaeaea;
+    /* Subtle border */
+    border-radius: 20px;
+    /* Soft rounded corners */
     padding: 3rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Soft shadow for depth */
     position: relative;
-    overflow: hidden; /* Prevent overflow from visual elements */
+    overflow: hidden;
+    /* Prevent overflow from visual elements */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* Elegant Hover Effect */
 .testimonial-item:hover {
-    transform: translateY(-10px); /* Slight lift */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+    transform: translateY(-10px);
+    /* Slight lift */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    /* Deeper shadow on hover */
 }
 
 /* Add a decorative top border on hover */
@@ -452,14 +558,16 @@ section p.blurb {
     position: absolute;
     height: 5px;
     width: 0%;
-    background: linear-gradient(90deg, #65abf2, #6eb6ff); /* Gradient border */
+    background: linear-gradient(90deg, #65abf2, #6eb6ff);
+    /* Gradient border */
     top: 0;
     left: 0;
     transition: width 0.4s ease;
 }
 
 .testimonial-item:hover::before {
-    width: 100%; /* Expand border on hover */
+    width: 100%;
+    /* Expand border on hover */
 }
 
 .quote-icon {
@@ -509,14 +617,21 @@ section p.blurb {
     border-radius: 10px;
     text-align: center;
     padding: 2rem;
-    flex: 1 1 300px; /* Flexible item size */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    flex: 1 1 300px;
+    /* Flexible item size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition */
     display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    justify-content: space-between; /* Distribute space */
-    min-height: 450px; /* Set a minimum height to ensure consistency */
-    position: relative; /* Create a stacking context */
+    flex-direction: column;
+    /* Arrange children vertically */
+    justify-content: space-between;
+    /* Distribute space */
+    min-height: 450px;
+    /* Set a minimum height to ensure consistency */
+    position: relative;
+    /* Create a stacking context */
 }
 
 .pricing-item h3 {
@@ -533,15 +648,18 @@ section p.blurb {
 
 /* Custom Bullet Point Styling */
 .pricing-item ul {
-    list-style: none; /* Remove default bullets */
+    list-style: none;
+    /* Remove default bullets */
     margin: 0;
     padding: 0;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
 }
 
 .pricing-item ul li {
     position: relative;
-    padding-left: 2rem; /* Space for custom bullet */
+    padding-left: 2rem;
+    /* Space for custom bullet */
     margin-bottom: 1rem;
     font-size: 1rem;
     color: #555;
@@ -549,12 +667,15 @@ section p.blurb {
 
 /* Custom Icon for Bullet Points */
 .pricing-item ul li::before {
-    content: '✔'; /* Use a checkmark symbol */
+    content: '✔';
+    /* Use a checkmark symbol */
     position: absolute;
     left: 0;
-    top: -2px; /* Center vertically */
+    top: -2px;
+    /* Center vertically */
     font-size: 1.2rem;
-    color: #e67e22; /* Custom color for the icon */
+    color: #e67e22;
+    /* Custom color for the icon */
     font-weight: 700;
 }
 
@@ -569,7 +690,8 @@ section p.blurb {
     display: inline-block;
     font-weight: 700;
     transition: background-color 0.3s ease;
-    margin-top: auto; /* Push the button to the bottom */
+    margin-top: auto;
+    /* Push the button to the bottom */
 }
 
 .pricing-item .btn-primary {
@@ -582,13 +704,17 @@ section p.blurb {
     color: white;
 }
 
-.pricing-item .btn-primary:hover, .pricing-item .btn-secondary:hover {
-    transform: scale(1.05); /* Slight lift effect */
+.pricing-item .btn-primary:hover,
+.pricing-item .btn-secondary:hover {
+    transform: scale(1.05);
+    /* Slight lift effect */
 }
 
 .best-value {
-    border: 2px solid #e67e22; /* Accent border */
-    background-color: #fdf6e3; /* Light yellow background */
+    border: 2px solid #e67e22;
+    /* Accent border */
+    background-color: #fdf6e3;
+    /* Light yellow background */
 }
 
 .best-value h3 {
@@ -601,8 +727,10 @@ section p.blurb {
 
 /* Flex grow to ensure button is always at the bottom */
 .pricing-item .btn {
-    align-self: center; /* Center the button horizontally */
-    margin-top: auto; /* Push the button to the bottom of the card */
+    align-self: center;
+    /* Center the button horizontally */
+    margin-top: auto;
+    /* Push the button to the bottom of the card */
 }
 
 
@@ -642,6 +770,7 @@ section p.blurb {
     width: 100px;
     display: block;
 }
+
 .testimonial-monster {
     width: 200px;
     display: block;
@@ -713,15 +842,20 @@ footer .footer-links a:hover {
     nav .btn {
         display: none;
     }
+
     .hero {
         height: 700px;
-        padding: 5rem 0 2rem 0; /* Adjusting padding to move the content up */
+        padding: 5rem 0 2rem 0;
+        /* Adjusting padding to move the content up */
     }
 
     .hero h1 {
-        font-size: 3.5rem;  /* Reducing font size on mobile */
-        line-height: 4rem;  /* Adjusting line height for better readability */
-        margin: 3rem auto 1rem auto;  /* Moving up the hero text */
+        font-size: 3.5rem;
+        /* Reducing font size on mobile */
+        line-height: 4rem;
+        /* Adjusting line height for better readability */
+        margin: 3rem auto 1rem auto;
+        /* Moving up the hero text */
     }
 
     .btn-cta.btn-primary {
@@ -730,12 +864,16 @@ footer .footer-links a:hover {
 
     .character-input-wrapper {
         display: flex;
-        flex-direction: column; /* Stack vertically on smaller screens */
+        flex-direction: column;
+        /* Stack vertically on smaller screens */
     }
 
-    .character-input, .btn-cta.btn-primary {
-        width: 100%; /* Full width for input and button on mobile */
-        max-width: 300px; /* Optional: Limit max width */
+    .character-input,
+    .btn-cta.btn-primary {
+        width: 100%;
+        /* Full width for input and button on mobile */
+        max-width: 300px;
+        /* Optional: Limit max width */
     }
 
     .features .feature-grid,
@@ -744,7 +882,8 @@ footer .footer-links a:hover {
     }
 
     .steps {
-        grid-template-columns: 1fr; /* Full-width cards on mobile */
+        grid-template-columns: 1fr;
+        /* Full-width cards on mobile */
     }
 
     .how-it-works .container {
@@ -767,11 +906,14 @@ footer .footer-links a:hover {
         order: 1;
     }
 
-    .text-left, .text-right {
+    .text-left,
+    .text-right {
         text-align: center;
         padding: 50px 0 100px 0;
     }
-    .text-left p, .text-right p {
+
+    .text-left p,
+    .text-right p {
         text-align: center;
     }
 
@@ -783,12 +925,14 @@ footer .footer-links a:hover {
         padding-right: 0;
     }
 
-    .image-left img, .image-right img {
+    .image-left img,
+    .image-right img {
         margin-bottom: 20px;
     }
 
     .testimonial-grid {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr;
+        /* Single column on smaller screens */
     }
 
     .testimonials h2 {
