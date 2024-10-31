@@ -715,7 +715,7 @@ footer .footer-links a:hover {
     }
     .hero {
         height: 700px;
-        padding: 10rem 0 2rem 0; /* Adjusting padding to move the content up */
+        padding: 5rem 0 2rem 0; /* Adjusting padding to move the content up */
     }
 
     .hero h1 {
@@ -728,8 +728,14 @@ footer .footer-links a:hover {
         width: 100%;
     }
 
-    .character-input {
-        width: 100%;
+    .character-input-wrapper {
+        display: flex;
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .character-input, .btn-cta.btn-primary {
+        width: 100%; /* Full width for input and button on mobile */
+        max-width: 300px; /* Optional: Limit max width */
     }
 
     .features .feature-grid,
