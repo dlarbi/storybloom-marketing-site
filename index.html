@@ -103,7 +103,7 @@
                         <div class="social-proof darker">
                             <span class="material-symbols-outlined checkmark-icon">check_circle</span>
         
-                            <span id="storyCount">282</span> new stories created this week
+                            <span id="storyCount2">282</span> new stories created this week
         
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                         <div class="social-proof darker">
                             <span class="material-symbols-outlined checkmark-icon">check_circle</span>
         
-                            <span id="storyCount">282</span> new stories created this week
+                            <span id="storyCount3">282</span> new stories created this week
         
                         </div>
                     </div>
@@ -331,7 +331,7 @@
                 <div class="social-proof darker">
                     <span class="material-symbols-outlined checkmark-icon">check_circle</span>
 
-                    <span id="storyCount">282</span> new stories created this week
+                    <span id="storyCount4">282</span> new stories created this week
 
                 </div>
             </div>
@@ -450,6 +450,10 @@
                     const daysSinceStart = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
                     const storyCount = baseStories + daysSinceStart * (10 + Math.floor(Math.random() * 11)); // 10 to 20 stories added daily
                     document.getElementById("storyCount").textContent = storyCount;
+                    document.getElementById("storyCount2").textContent = storyCount;
+                    document.getElementById("storyCount3").textContent = storyCount;
+                    document.getElementById("storyCount4").textContent = storyCount;
+
                 }
 
                 // Initialize story count on load
