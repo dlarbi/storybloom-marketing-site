@@ -81,6 +81,10 @@ nav .btn:hover {
     text-align: center;
 }
 
+
+.hero.giveaway {
+    height: 900px;
+}
 .btn-cta.btn-primary .icon {
     font-size: 1.2rem;
     line-height: 1rem;
