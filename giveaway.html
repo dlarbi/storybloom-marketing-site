@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M6TTJZMN');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGK5BZ3J5J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PGK5BZ3J5J');
+    </script>
+    <meta charset="UTF-8">
+    <title>StoryBloom - Growing Minds Through Personalized Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:400,400i,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon-transparent.png" type="image/x-icon">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6TTJZMN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="images/transparent-logo.png" width="40px" height="40px"></img>
+                <a href="#" class="logo">StoryBloom</a>
+
+            </div>
+            <ul class="nav-links"></ul>
+            <li><a href="#" class="btn">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-fader"></div>
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 30px; font-family: 'Roboto', sans-serif; color: #333;">
+                <div style="background: #f7f9fc; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+                    <p style="font-size: 1.5em; font-weight: bold; color: #4864e6; margin: 10px 0; text-align: center;">
+                        🎉 Win a FREE Hardcover of Your Own Story! 🎉
+                    </p>
+                    <p style="font-size: 1.1em; color: #555; margin-bottom: 20px; text-align: center;">
+                        Enter our <strong>StoryBloom Giveaway</strong> for a chance to get a beautifully printed, hardcover book featuring your own story creation!
+                    </p>
+                    
+                    <div style="background: linear-gradient(to right, #6eb6ff, #4864e6); color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 1.1em;">
+                        <strong>How to Enter:</strong>
+                    </div>
+                    
+                    <ul style="text-align: left; font-size: 1em; color: #555; margin: 0 auto; padding: 0 20px; max-width: 500px; line-height: 1.6;">
+                        <li><strong>Step 1:</strong> Fill out the form below with your character details and email address.</li>
+                        <li><strong>Step 2:</strong> Tag friends in our Instagram post – each tag gets you an extra entry!</li>
+                        <li><strong>Step 3:</strong> Follow <span style="color: #4864e6; font-weight: bold;">@StoryBloom</span> on Instagram for one more entry!</li>
+                    </ul>
+                    
+                    <p style="font-size: 1.1em; color: #333; margin-top: 20px; font-weight: bold; text-align:center;">
+                        🌈 Best of luck, storytellers! 📚
+                    </p>
+                    <div class="character-input-wrapper">
+                        <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
+                            class="character-input">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroCharacterName')">
+                            Enter the Giveaway! <span class="icon">🌸</span>
+                        </button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <div class="content-wrapper">
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <div class="flex-item image-left">
+                    <img src="images/create-story-iphone.png" alt="Create Story">
+                </div>
+                <div class="flex-item text-right">
+                    <h3>Build your own world</h3>
+                    <p>Imagine the characters, values, themes, and writing style you want to cultivate. Select from a
+                        variety
+                        of morals and life lessons for different ages.</p>
+
+                    <!-- CTA Instance -->
+                    <div class="character-input-wrapper">
+                        <input type="text" placeholder="Enter a Character Name..." class="character-input"
+                            id="howItWorksCharacterName">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('howItWorksCharacterName')">
+                            Enter the Giveaway! <span class="icon">🌸</span>
+                        </button>
+                        <div class="microcopy">Instant preview in your inbox</div>
+                        <div class="social-proof darker">
+                            <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+
+                            <span id="storyCount2">282</span> new stories created this week
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="flex-item text-left">
+                    <h3>Pets and (imaginary?) friends</h3>
+                    <p>Feature your beloved friends, family, pets, or action hero in legendary tales of your own
+                        creation. Set obstacles, instill values, and define your endings to inspire your children's
+                        imagination.</p>
+                </div>
+                <div class="flex-item image-right">
+                    <img src="images/add-characters-iphone.png" alt="Add Characters">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="flex-item image-left">
+                    <img src="images/cover-iphone.png" alt="Cover Page">
+                </div>
+                <div class="flex-item text-right">
+                    <h3>Easy reading</h3>
+                    <p>StoryBloom's easy-to-use story reader makes reading and sharing your stories a breeze on mobile
+                        or desktop. Or visit our printshop and get a physical copy of the tales you create.</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="flex-item text-left">
+                    <h3>Beautiful art style</h3>
+                    <p>Unlike the bland, AI-generated art style you'll find from other children's book creators,
+                        StoryBloom stories feature beautiful, artful illustrations that truly match the essence of your
+                        beloved characters.</p>
+                    <div class="character-input-wrapper">
+                        <input type="text" id="artStyleCharacterName" placeholder="Enter a Character Name..."
+                            class="character-input">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('artStyleCharacterName')">
+                            Enter the Giveaway! <span class="icon">🌸</span>
+                        </button>
+                        <div class="microcopy">Instant preview in your inbox</div>
+                        <div class="social-proof darker">
+                            <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+
+                            <span id="storyCount3">282</span> new stories created this week
+
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-item image-right">
+                    <img src="images/reader-iphone.png" alt="Reader">
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="flex-item image-left">
+                    <img src="images/library-iphone.png" alt="Library">
+                </div>
+                <div class="flex-item text-right">
+                    <h3>A library of your values</h3>
+                    <p>Build your library and share the worlds you build with your children and family.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>What Our Users Are Saying</h2> <!-- New heading for context -->
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <div class="quote-icon">❝</div> <!-- Add a quote icon -->
+                        <p>"StoryBloom has become an integral part of our bedtime routine. My daughter loves seeing
+                            herself as the hero, and I love that she's learning valuable lessons."</p>
+                        <h4>Emily R.</h4>
+                        <span>Mother of a 5-year-old</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="quote-icon">❝</div> <!-- Add a quote icon -->
+                        <p>"As a teacher, I've found StoryBloom to be an incredible tool for reinforcing positive values
+                            in the classroom. The kids are more engaged than ever!"</p>
+                        <h4>Mr. Thompson</h4>
+                        <span>Elementary School Teacher</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Features Section -->
+        <!-- <section id="features" class="features">
+            <div class="container">
+                <h2>Why Choose StoryBloom?</h2>
+                <p class="blurb">In a digital world filled with generic content, StoryBloom offers a unique experience where stories are crafted specifically for your child. We blend the magic of storytelling with the power of personalization to create enriching narratives that foster imagination, learning, and moral development.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="icon">🌸</div>
+                        <h3>Personalized Storytelling</h3>
+                        <ul>
+                            <li><strong>Unique Characters:</strong> Incorporate your child's name, interests, and favorite elements into every story.</li>
+                            <li><strong>Custom Themes:</strong> Select moral lessons and values you wish to highlight, from kindness to courage.</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">📚</div>
+                        <h3>Educational and Enriching</h3>
+                        <ul>
+                            <li><strong>Age-Appropriate Language:</strong> Stories tailored to your child's developmental stage.</li>
+                            <li><strong>Vocabulary Building:</strong> Enhance language skills through engaging narratives.</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🌿</div>
+                        <h3>Warm and Nurturing Content</h3>
+                        <ul>
+                            <li><strong>Heartfelt Narratives:</strong> Stories that resonate emotionally, strengthening the parent-child bond.</li>
+                            <li><strong>Positive Messaging:</strong> Encourage empathy, resilience, and other essential values.</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🎨</div>
+                        <h3>Beautiful Illustrations</h3>
+                        <ul>
+                            <li><strong>Vivid Artwork:</strong> Captivating visuals that bring each story to life.</li>
+                            <li><strong>Interactive Elements:</strong> Engage your child with touch-responsive features.</li>
+                        </ul>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🚀</div>
+                        <h3>User-Friendly Platform</h3>
+                        <ul>
+                            <li><strong>Easy Customization:</strong> Create personalized stories in just a few clicks.</li>
+                            <li><strong>Accessible Anywhere:</strong> Enjoy stories on any device, whether at home or on the go.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Pricing Plans</h2>
+                <div class="pricing-grid">
+                    <!-- Individual Story Option -->
+                    <div class="pricing-item">
+                        <h3>Individual Story</h3>
+                        <h4>$1.49 per story</h4>
+                        <ul>
+                            <li>Perfect for gifts or a fun bedtime story!</li>
+                            <li>Access to the full customization features</li>
+                            <li>No long-term commitment</li>
+                            <li>Instant access to your story</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Buy a Story</a>
+                    </div>
+
+                    <!-- Story Pack Option -->
+                    <div class="pricing-item">
+                        <h3>Story Pack</h3>
+                        <h4>$5 for 6 stories</h4>
+                        <ul>
+                            <li>Days of fun for your family!</li>
+                            <li>Access to the full customization features</li>
+                            <li>No long-term commitment</li>
+                            <li>Instant access to your stories</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Get Story Pack</a>
+                    </div>
+
+                    <!-- Subscription Option -->
+                    <div class="pricing-item best-value">
+                        <h3>Unlimited Plan</h3>
+                        <h4>$2.99/month or $30/year</h4>
+                        <ul>
+                            <li>Unlimited story creation</li>
+                            <li>Full customization features</li>
+                            <li>Access to exclusive content</li>
+                            <li>Priority customer support</li>
+                            <li>Best value for frequent users</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Subscribe Now</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>What ages is StoryBloom suitable for?</h3>
+                    <p>StoryBloom is designed for children aged 3 to 10, with content customized to suit different
+                        developmental stages.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I include multiple values in a single story?</h3>
+                    <p>Yes! You can select multiple values and themes to create rich, multifaceted stories.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is StoryBloom accessible on all devices?</h3>
+                    <p>Absolutely. StoryBloom works seamlessly on tablets, smartphones, and computers via modern web
+                        browsers.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How many stories can I create?</h3>
+                    <p>With a premium subscription, you can create unlimited stories. Free users have access to a
+                        limited number of stories per month.</p>
+                </div>
+            </div>
+        </section>
+        <div style="margin: 0 auto; max-width:800px; text-align:center; margin-bottom:80px">
+            <div class="character-input-wrapper">
+                <input type="text" id="footerCharacterName" placeholder="Enter a Character Name..."
+                    class="character-input">
+                <button class="btn-cta btn-primary" onclick="populateAndOpenModal('footerCharacterName')">
+                    Enter the Giveaway! <span class="icon">🌸</span>
+                </button>
+                <div class="microcopy">Instant preview in your inbox</div>
+                <div class="social-proof darker">
+                    <span class="material-symbols-outlined checkmark-icon">check_circle</span>
+
+                    <span id="storyCount4">282</span> new stories created this week
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <img src="images/monster2.png" class="testimonial-monster" />
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>Made with love in Ann Arbor, Michigan ❤️</p>
+                <div class="social-links">
+                    <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                </div>
+                <p>© 2024 StoryBloom. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <!-- JavaScript -->
+    <script src="animations.js"></script>
+    <script type="text/javascript">
+        // Add this to your marketing site HTML to create the button
+        // <button id="openStoryModal" onclick="openStoryModal()">Enter the Giveaway!</button>
+
+        // JavaScript to add to your marketing site for the widget
+        (function () {
+            // Create modal container
+            const modal = document.createElement('div');
+            modal.id = 'storyModal';
+            modal.style.display = 'none';
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100%';
+            modal.style.height = '100%';
+            modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            modal.style.zIndex = '1000';
+            modal.style.overflowY = 'auto';
+
+            modal.innerHTML = `
+        <div style="max-width: 600px; margin: 50px auto;">
+        <div id="modalContent" style="width:94%; margin: 0 3%; background: linear-gradient(37deg, #e1edff, #ffe6df); padding: 30px; border-radius: 20px; position: relative; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); font-family: 'Montserrat', sans-serif">
+            <button onclick="closeStoryModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: #333; cursor: pointer;">&times;</button>
+            <div id="formContent">
+                <div style="width: 100%; text-align: center; margin-bottom:20px;">
+                    <img src="images/transparent-logo.png" width="25px" height="25px" style="margin: 0 auto;"></img><h2 style="font-family: 'Montserrat'";>StoryBloom</h2>
+                </div>
+               
+                <form id="storyForm">
+                    <label for="storyChoice" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Choose Your Story:</label>
+                    <select id="storyChoice" name="storyChoice" style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;">
+                        <option value="Adventure in the Forest">Adventure in the Forest</option>
+                        <option value="A Day at the Beach">A Day at the Beach</option>
+                        <option value="The Magical School">The Magical School</option>
+                    </select>
+
+                    <label for="characterName" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Character Name</label>
+                    <input placeholder="Enter a name..." type="text" id="characterName" name="characterName" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <label for="characterType" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">What is your character?</label>
+                    <input placeholder="e.g., a dragon, a brave knight" type="text" id="characterType" name="characterType" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <label for="characterDescription" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Describe your character</label>
+                    <input placeholder="e.g., grey and white, wearing skiis, giant and red" type="text" id="characterDescription" name="characterDescription" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <label for="userEmail" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Your Email:</label>
+                    <input placeholder="@" type="email" id="userEmail" name="userEmail" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+
+                    <button type="submit" id="submitButton" style="width: 100%; padding: 15px; background: linear-gradient(to right, #6eb6ff, #4864e6); border: none; color: #fff; border-radius: 30px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;">Enter the Giveaway!</button>
+                </form>
+                
+            </div>
+            <div id="loadingIndicator" style="display: none; text-align: center; padding: 20px;">
+                <p>Loading...</p>
+            </div>
+            <div id="successContent" style="display: none; text-align: center;">
+                <div style="color: green; font-size: 2rem; margin-bottom: 10px;">✔️</div>
+                <p>Your story was successfully created! Check your email for your personalized story.</p>
+                <a id="appLink" href="https://storybloom.me/download-app" target="_blank" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #28a745; color: white; border-radius: 5px; text-decoration: none; font-weight: bold;">Download Our App</a>
+            </div>
+        </div>
+        </div>
+        `;
+            window.addEventListener('DOMContentLoaded', (event) => {
+                document.getElementById('heroCharacterName').focus();
+                // Function to add wiggle animation to button
+                function addWiggleEffect(button) {
+                    button.classList.add('wiggle');
+                    setTimeout(() => button.classList.remove('wiggle'), 800); // Remove wiggle after animation
+                }
+
+                // Apply wiggle effect on load
+                document.querySelectorAll('.btn-cta').forEach(button => addWiggleEffect(button));
+
+                // Observe each button for visibility within viewport
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            addWiggleEffect(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 }); // Trigger when 50% of the button is visible
+
+                // Observe all CTA buttons for the scroll effect
+                document.querySelectorAll('.btn-cta').forEach(button => observer.observe(button));
+
+                // Social Proof Counter
+                const startDate = new Date("2024-10-31");
+                let baseStories = 282;
+
+                function updateStoryCount() {
+                    const today = new Date();
+                    const daysSinceStart = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+                    const storyCount = baseStories + daysSinceStart * (10 + Math.floor(Math.random() * 11)); // 10 to 20 stories added daily
+                    document.getElementById("storyCount").textContent = storyCount;
+                    document.getElementById("storyCount2").textContent = storyCount;
+                    document.getElementById("storyCount3").textContent = storyCount;
+                    document.getElementById("storyCount4").textContent = storyCount;
+
+                }
+
+                // Initialize story count on load
+                updateStoryCount();
+
+                // Rotating Testimonials
+                const testimonials = [
+                    "Emily just created her story!",
+                    "Stories personalized to every child’s imagination.",
+                    "Loved by teachers and parents alike."
+                ];
+                let testimonialIndex = 0;
+
+                function rotateTestimonials() {
+                    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+                    document.getElementById("testimonial").textContent = testimonials[testimonialIndex];
+                }
+
+                // Rotate testimonials every 5 seconds
+                setInterval(rotateTestimonials, 5000);
+
+            });
+            document.body.appendChild(modal);
+            const BASE_API_URL = window.location.hostname === 'localhost' ?
+                'http://localhost:8080' :
+                'https://api.storybloom.me';
+
+            window.populateAndOpenModal = function (inputId) {
+                gtag('event', 'clicked hero cta', {
+                    'event_category': 'engagement',
+                    'event_label': 'Hero CTA',
+                });
+                const characterName = document.getElementById(inputId).value;
+                openStoryModal();
+                document.getElementById('characterName').value = characterName;
+            }
+
+            window.openStoryModal = function () {
+                modal.style.display = 'block';
+            };
+
+            window.closeStoryModal = function () {
+                modal.style.display = 'none';
+                document.getElementById('formContent').style.display = 'block';
+                document.getElementById('successContent').style.display = 'none';
+            };
+
+            // Handle form submission
+            document.getElementById('storyForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Show loading state
+                document.getElementById('formContent').style.display = 'none';
+                document.getElementById('loadingIndicator').style.display = 'block';
+
+                const characterName = document.getElementById('characterName').value;
+                const characterType = document.getElementById('characterType').value;
+                const characterDescription = document.getElementById('characterDescription').value;
+                const storyChoice = document.getElementById('storyChoice').value;
+                const userEmail = document.getElementById('userEmail').value;
+
+                // Build StorySeed object
+                const storySeed = {
+                    characters: [{
+                        name: characterName,
+                        description: `A ${characterType} who ${characterDescription}.`
+                    }],
+                    pageCount: 5,
+                    childAge: 3,
+                    lessons: [],
+                    writingStyle: 'Playful, light',
+                    artStyle: 'Watercolor',
+                    obstacle: 'The character must solve a simple riddle.',
+                    solution: 'The character finds the answer with help.',
+                    ending: 'The character succeeds and learns a valuable lesson.',
+                    genre: storyChoice
+                };
+
+                // Simulate loading delay and API submission
+                fetch(`${BASE_API_URL}/build-free-signup-story`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ storySeed, userEmail })
+                })
+                    .then(response => {
+                        // closeStoryModal();
+                    })
+                    .catch(() => {
+                        alert('There was an error connecting to the server. Please try again.');
+                        closeStoryModal();
+                    });
+                setTimeout(() => {
+                    document.getElementById('loadingIndicator').style.display = 'none';
+                    document.getElementById('successContent').style.display = 'block';
+                }, 2000);
+            });
+        })();
+
+    </script>
+</body>
+
+</html>
