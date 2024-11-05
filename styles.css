@@ -218,6 +218,36 @@ nav .btn:hover {
     /* Ensures consistent appearance across browsers */
 }
 
+.giveaway-link-wrapper {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.giveaway-link {
+    display: inline-block;
+    background: linear-gradient(to right, #ff9f9f, #ff5e5e);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.giveaway-link span {
+    display: block;
+    font-size: 0.9em;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+.giveaway-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
 
 .character-input-wrapper {
     align-items: center;
