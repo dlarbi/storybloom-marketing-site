@@ -102,8 +102,7 @@
                         🌈 Best of luck, storytellers! 📚
                     </p>
                     <div class="character-input-wrapper">
-                        <input type="text" id="heroEmail" placeholder="name@gmail.com"
-                            class="character-input">
+                        <input type="text" id="heroEmail" placeholder="name@gmail.com" class="character-input">
                         <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroEmail')">
                             Enter the Giveaway! <span class="icon">🌸</span>
                         </button>
@@ -132,8 +131,7 @@
 
                     <!-- CTA Instance -->
                     <div class="character-input-wrapper">
-                        <input type="text" placeholder="name@gmail.com" class="character-input"
-                            id="characterEmail">
+                        <input type="text" placeholder="name@gmail.com" class="character-input" id="characterEmail">
                         <button class="btn-cta btn-primary" onclick="populateAndOpenModal('characterEmail')">
                             Enter the Giveaway! <span class="icon">🌸</span>
                         </button>
@@ -178,8 +176,7 @@
                         StoryBloom stories feature beautiful, artful illustrations that truly match the essence of your
                         beloved characters.</p>
                     <div class="character-input-wrapper">
-                        <input type="text" id="artEmail" placeholder="name@gmail.com"
-                            class="character-input">
+                        <input type="text" id="artEmail" placeholder="name@gmail.com" class="character-input">
                         <button class="btn-cta btn-primary" onclick="populateAndOpenModal('artEmail')">
                             Enter the Giveaway! <span class="icon">🌸</span>
                         </button>
@@ -360,8 +357,7 @@
         </section>
         <div style="margin: 0 auto; max-width:800px; text-align:center; margin-bottom:80px">
             <div class="character-input-wrapper">
-                <input type="text" id="footerEmail" placeholder="name@gmail.com"
-                    class="character-input">
+                <input type="text" id="footerEmail" placeholder="name@gmail.com" class="character-input">
                 <button class="btn-cta btn-primary" onclick="populateAndOpenModal('footerEmail')">
                     Enter the Giveaway! <span class="icon">🌸</span>
                 </button>
@@ -526,6 +522,22 @@
                     'event_label': 'Hero CTA',
                 });
                 const userEmail = document.getElementById(inputId).value;
+
+                // Call the API to create the user
+                fetch(`http://localhost:8080/create-user`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ userEmail })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('User created:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
                 openStoryModal();
                 document.getElementById('userEmail').value = userEmail;
             }
