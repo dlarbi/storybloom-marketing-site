@@ -72,40 +72,48 @@
         <div class="hero-fader"></div>
         <div class="container">
             <div style="text-align: center; margin-bottom: 30px; font-family: 'Roboto', sans-serif; color: #333;">
-                <div style="background: #f7f9fc; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+                <div
+                    style="background: #f7f9fc; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
                     <p style="font-size: 1.5em; font-weight: bold; color: #4864e6; margin: 10px 0; text-align: center;">
                         🎉 Win a FREE Hardcover of Your Own Story! 🎉
                     </p>
                     <p style="font-size: 1.1em; color: #555; margin-bottom: 20px; text-align: center;">
-                        Enter our StoryBloom Giveaway for a chance to get a <strong>beautifully printed, hardcover book</strong> featuring your own story creation!
+                        Enter our StoryBloom Giveaway for a chance to get a <strong>beautifully printed, hardcover
+                            book</strong> featuring your own story creation!
                     </p>
-                    
-                    <div style="background: linear-gradient(to right, #6eb6ff, #4864e6); color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 1.1em;">
+
+                    <div
+                        style="background: linear-gradient(to right, #6eb6ff, #4864e6); color: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 1.1em;">
                         <strong>How to Enter:</strong>
                     </div>
-                    
-                    <ul style="text-align: left; font-size: 1em; color: #555; margin: 0 auto; padding: 0 20px; max-width: 500px; line-height: 1.6;">
-                        <li><strong>Step 1:</strong> Fill out the form below with your character details and email address.</li>
-                        <li><strong>Step 2:</strong> Tag friends in our Instagram post – each tag gets you an extra entry!</li>
-                        <li><strong>Step 3:</strong> Follow <span style="color: #4864e6; font-weight: bold;">@StoryBloom</span> on Instagram for one more entry!</li>
+
+                    <ul
+                        style="text-align: left; font-size: 1em; color: #555; margin: 0 auto; padding: 0 20px; max-width: 500px; line-height: 1.6;">
+                        <li><strong>Step 1:</strong> Fill out the form below with your character details and email
+                            address.</li>
+                        <li><strong>Step 2:</strong> Tag friends in our Instagram post – each tag gets you an extra
+                            entry!</li>
+                        <li><strong>Step 3:</strong> Follow <span
+                                style="color: #4864e6; font-weight: bold;">@StoryBloom</span> on Instagram for one more
+                            entry!</li>
                     </ul>
-                    
+
                     <p style="font-size: 1.1em; color: #333; margin-top: 20px; font-weight: bold; text-align:center;">
                         🌈 Best of luck, storytellers! 📚
                     </p>
                     <div class="character-input-wrapper">
-                        <input type="text" id="heroCharacterName" placeholder="Enter a Character Name..."
+                        <input type="text" id="heroEmail" placeholder="name@gmail.com"
                             class="character-input">
-                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroCharacterName')">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('heroEmail')">
                             Enter the Giveaway! <span class="icon">🌸</span>
                         </button>
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
-            
-            
+
+
         </div>
     </section>
 
@@ -124,9 +132,9 @@
 
                     <!-- CTA Instance -->
                     <div class="character-input-wrapper">
-                        <input type="text" placeholder="Enter a Character Name..." class="character-input"
-                            id="howItWorksCharacterName">
-                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('howItWorksCharacterName')">
+                        <input type="text" placeholder="name@gmail.com" class="character-input"
+                            id="characterEmail">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('characterEmail')">
                             Enter the Giveaway! <span class="icon">🌸</span>
                         </button>
                         <div class="microcopy">Instant preview in your inbox</div>
@@ -170,9 +178,9 @@
                         StoryBloom stories feature beautiful, artful illustrations that truly match the essence of your
                         beloved characters.</p>
                     <div class="character-input-wrapper">
-                        <input type="text" id="artStyleCharacterName" placeholder="Enter a Character Name..."
+                        <input type="text" id="artEmail" placeholder="name@gmail.com"
                             class="character-input">
-                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('artStyleCharacterName')">
+                        <button class="btn-cta btn-primary" onclick="populateAndOpenModal('artEmail')">
                             Enter the Giveaway! <span class="icon">🌸</span>
                         </button>
                         <div class="microcopy">Instant preview in your inbox</div>
@@ -352,9 +360,9 @@
         </section>
         <div style="margin: 0 auto; max-width:800px; text-align:center; margin-bottom:80px">
             <div class="character-input-wrapper">
-                <input type="text" id="footerCharacterName" placeholder="Enter a Character Name..."
+                <input type="text" id="footerEmail" placeholder="name@gmail.com"
                     class="character-input">
-                <button class="btn-cta btn-primary" onclick="populateAndOpenModal('footerCharacterName')">
+                <button class="btn-cta btn-primary" onclick="populateAndOpenModal('footerEmail')">
                     Enter the Giveaway! <span class="icon">🌸</span>
                 </button>
                 <div class="microcopy">Instant preview in your inbox</div>
@@ -432,7 +440,7 @@
                     <input placeholder="e.g., grey and white, wearing skiis, giant and red" type="text" id="characterDescription" name="characterDescription" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 1px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
 
                     <label for="userEmail" style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Your Email:</label>
-                    <input placeholder="@" type="email" id="userEmail" name="userEmail" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
+                    <input placeholder="name@gmail.com" type="email" id="userEmail" name="userEmail" required style="width: 100%; margin-bottom: 20px; padding: 12px; border-radius: 10px; border: 2px solid #ccc; transition: border-color 0.3s ease; font-size: 16px;"/>
 
                     <button type="submit" id="submitButton" style="width: 100%; padding: 15px; background: linear-gradient(to right, #6eb6ff, #4864e6); border: none; color: #fff; border-radius: 30px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s ease;">Enter the Giveaway!</button>
                 </form>
@@ -517,9 +525,9 @@
                     'event_category': 'engagement',
                     'event_label': 'Hero CTA',
                 });
-                const characterName = document.getElementById(inputId).value;
+                const userEmail = document.getElementById(inputId).value;
                 openStoryModal();
-                document.getElementById('characterName').value = characterName;
+                document.getElementById('userEmail').value = userEmail;
             }
 
             window.openStoryModal = function () {
