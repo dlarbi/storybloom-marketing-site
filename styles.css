@@ -30,12 +30,40 @@ body {
     margin-right: 15px;
 }
 
+
+.fixed-giveaway-link {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ff9f9f, #ff5e5e);
+    color: white;
+    padding: 8px 15px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.fixed-giveaway-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Navigation */
 nav {
     position: absolute;
     z-index: 1;
     width: 100%;
     margin-top:40px;
+}
+
+.giveaway-page-nav {
+    margin-top: 0px;
 }
 
 nav .container {
@@ -250,28 +278,6 @@ nav .btn:hover {
 .giveaway-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.fixed-giveaway-link {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    background: linear-gradient(to right, #ff9f9f, #ff5e5e);
-    color: white;
-    padding: 8px 15px;
-    font-size: 1em;
-    text-align: center;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-}
-
-.fixed-giveaway-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Add responsiveness for smaller screens */
